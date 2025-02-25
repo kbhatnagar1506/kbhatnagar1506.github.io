@@ -3,7 +3,7 @@
     --primary-color: #4D9CFF;
     --primary-light: rgba(77, 156, 255, 0.1);
     --secondary-color: #1E1E1E;
-    --background-dark: #0A0A0A;
+    --background-dark: #000000;
     --background-darker: #000000;
     --text-primary: #FFFFFF;
     --text-secondary: rgba(255, 255, 255, 0.8);
@@ -15,7 +15,7 @@
     --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     --box-shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.4);
     --gradient-primary: linear-gradient(135deg, #4D9CFF 0%, #2E7FFF 100%);
-    --gradient-dark: linear-gradient(135deg, #0A0A0A 0%, #000000 100%);
+    --gradient-dark: linear-gradient(135deg, #000000 0%, #000000 100%);
 }
 
 * {
@@ -65,7 +65,7 @@ h2 {
 
 /* Header and Navigation */
 .header {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.9);
     backdrop-filter: saturate(180%) blur(20px);
     position: fixed;
     width: 100%;
@@ -76,7 +76,7 @@ h2 {
 }
 
 .header.scrolled {
-    background-color: rgba(0, 0, 0, 0.95);
+    background-color: rgba(0, 0, 0, 1);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
@@ -304,7 +304,7 @@ h2 {
 }
 
 .skill-card {
-    background: var(--background-dark);
+    background: #000000;
     padding: calc(var(--spacing-unit) * 4);
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
@@ -339,7 +339,7 @@ h2 {
 }
 
 .project-card {
-    background: var(--background-dark);
+    background: #000000;
     border-radius: var(--border-radius);
     overflow: hidden;
     box-shadow: var(--box-shadow);
@@ -439,7 +439,7 @@ h2 {
     font-size: 17px;
     transition: border-color var(--transition-speed);
     font-family: inherit;
-    background: var(--background-darker);
+    background: #000000;
     color: var(--text-primary);
 }
 
@@ -457,7 +457,7 @@ h2 {
 
 /* Footer */
 .footer {
-    background-color: var(--background-darker);
+    background-color: #000000;
     color: white;
     padding: calc(var(--spacing-unit) * 8) var(--spacing-unit) calc(var(--spacing-unit) * 4);
     border-top: 1px solid rgba(255, 255, 255, 0.05);
@@ -587,7 +587,7 @@ h2 {
 }
 
 .certificate-card {
-    background: var(--background-dark);
+    background: #000000;
     border-radius: var(--border-radius);
     overflow: hidden;
     transition: transform var(--transition-speed), box-shadow var(--transition-speed);
@@ -680,7 +680,7 @@ h2 {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     gap: calc(var(--spacing-unit) * 6);
-    background: var(--background-dark);
+    background: #000000;
     padding: calc(var(--spacing-unit) * 6);
     border-radius: var(--border-radius-large);
     position: relative;
@@ -706,7 +706,7 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--background-darker);
+    background: #000000;
     border-radius: var(--border-radius-large);
     padding: calc(var(--spacing-unit) * 4);
     box-shadow: var(--box-shadow);
@@ -761,7 +761,7 @@ h2 {
 
 .project-highlights {
     margin: calc(var(--spacing-unit) * 4) 0;
-    background: var(--background-dark);
+    background: #000000;
     padding: calc(var(--spacing-unit) * 4);
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
@@ -899,7 +899,7 @@ h2 {
 }
 
 .case-study-hero {
-    background: var(--background-darker);
+    background: #000000;
     padding: calc(var(--spacing-unit) * 12) var(--spacing-unit);
     text-align: center;
 }
@@ -958,7 +958,7 @@ h2 {
 .feature-block {
     margin-top: calc(var(--spacing-unit) * 6);
     padding: calc(var(--spacing-unit) * 4);
-    background: var(--background-darker);
+    background: #000000;
     border-radius: var(--border-radius);
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
@@ -1005,7 +1005,7 @@ h2 {
 
 .tech-item {
     padding: calc(var(--spacing-unit) * 4);
-    background: var(--background-darker);
+    background: #000000;
     border-radius: var(--border-radius);
     transition: transform var(--transition-speed);
 }
@@ -1040,7 +1040,7 @@ h2 {
 .result-item {
     text-align: center;
     padding: calc(var(--spacing-unit) * 4);
-    background: var(--background-darker);
+    background: #000000;
     border-radius: var(--border-radius);
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     transition: transform var(--transition-speed);
