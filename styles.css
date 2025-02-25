@@ -432,4 +432,108 @@ h2 {
 
 .hero-content, .about-content, .project-card {
     animation: fadeIn 1s ease-out;
+}
+
+/* Certificates Section */
+.certificates {
+    padding: calc(var(--spacing-unit) * 12) var(--spacing-unit);
+    background-color: white;
+}
+
+.certificates-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: calc(var(--spacing-unit) * 4);
+    padding: 0 var(--spacing-unit);
+}
+
+.certificate-card {
+    background: var(--background-light);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    animation: fadeIn 1s ease-out;
+}
+
+.certificate-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.certificate-content {
+    padding: calc(var(--spacing-unit) * 4);
+}
+
+.certificate-icon {
+    font-size: 48px;
+    margin-bottom: calc(var(--spacing-unit) * 3);
+}
+
+.certificate-content h3 {
+    font-size: 24px;
+    line-height: 1.2;
+    margin-bottom: calc(var(--spacing-unit) * 2);
+    color: var(--text-primary);
+}
+
+.certificate-issuer {
+    font-size: 17px;
+    color: var(--primary-color);
+    font-weight: 500;
+    margin-bottom: var(--spacing-unit);
+}
+
+.certificate-date {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: calc(var(--spacing-unit) * 3);
+}
+
+.certificate-details {
+    list-style: none;
+    margin-bottom: calc(var(--spacing-unit) * 3);
+}
+
+.certificate-details li {
+    font-size: 15px;
+    color: var(--text-secondary);
+    margin-bottom: calc(var(--spacing-unit));
+    padding-left: calc(var(--spacing-unit) * 3);
+    position: relative;
+}
+
+.certificate-details li::before {
+    content: "•";
+    color: var(--primary-color);
+    position: absolute;
+    left: var(--spacing-unit);
+}
+
+.certificate-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    display: inline-flex;
+    align-items: center;
+    transition: transform var(--transition-speed);
+}
+
+.certificate-link:hover {
+    transform: translateX(4px);
+}
+
+@media (max-width: 768px) {
+    .certificates-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .certificate-content {
+        padding: calc(var(--spacing-unit) * 3);
+    }
 } 
