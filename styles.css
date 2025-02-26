@@ -1212,12 +1212,12 @@ h2 {
 
 .education-logo {
     margin: calc(var(--spacing-unit) * 3) 0;
-    height: 80px;
+    height: 100px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    background: linear-gradient(145deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.08) 100%);
-    padding: calc(var(--spacing-unit) * 2.5);
+    background: transparent;
+    padding: 0;
     border-radius: var(--border-radius);
     transition: all var(--transition-speed) cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
@@ -1225,21 +1225,13 @@ h2 {
 }
 
 .education-logo::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(145deg, rgba(77, 156, 255, 0.1), transparent);
-    opacity: 0;
-    transition: opacity var(--transition-speed);
+    display: none;
 }
 
 .education-logo img {
     height: 100%;
     width: auto;
-    max-width: 200px;
+    max-width: 280px;
     object-fit: contain;
     filter: none;
     opacity: 0.9;
@@ -1249,13 +1241,7 @@ h2 {
 }
 
 .education-card:hover .education-logo {
-    background: linear-gradient(145deg, rgba(77, 156, 255, 0.1) 0%, rgba(77, 156, 255, 0.05) 100%);
     transform: translateY(-2px);
-    box-shadow: 0 4px 20px rgba(77, 156, 255, 0.15);
-}
-
-.education-card:hover .education-logo::before {
-    opacity: 1;
 }
 
 .education-card:hover .education-logo img {
@@ -1278,6 +1264,6 @@ h2 {
     }
 
     .education-logo {
-        height: 70px;
+        height: 90px;
     }
 } 
