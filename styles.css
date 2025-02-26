@@ -2050,24 +2050,30 @@ h2 {
 
 /* Jobs Page Styles */
 .jobs-page {
-    display: grid;
-    grid-template-columns: 1fr;
-    padding-top: 80px;
-    background: linear-gradient(180deg, var(--background-darker) 0%, var(--background-dark) 100%);
     min-height: 100vh;
+    background: var(--background-dark);
+    color: var(--text-primary);
+    padding-top: 80px;
     position: relative;
     overflow-x: hidden;
 }
 
+.jobs-page .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-unit);
+    position: relative;
+}
+
 .jobs-hero {
-    height: 50vh;
+    min-height: 40vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     position: relative;
-    overflow: hidden;
-    margin-bottom: 80px;
+    padding: calc(var(--spacing-unit) * 8) 0;
+    margin-bottom: calc(var(--spacing-unit) * 8);
 }
 
 .jobs-hero::before {
@@ -2087,22 +2093,43 @@ h2 {
 .jobs-hero-content {
     max-width: 800px;
     margin: 0 auto;
-    padding: calc(var(--spacing-unit) * 4);
-    background: rgba(0, 0, 0, 0.6);
+    padding: calc(var(--spacing-unit) * 6);
+    background: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: var(--border-radius-large);
     border: 1px solid rgba(255, 255, 255, 0.05);
-    opacity: 0;
-    transform: translateY(20px);
     animation: fadeInUp 1s forwards;
 }
 
+.jobs-hero-content h1 {
+    font-size: 48px;
+    margin-bottom: calc(var(--spacing-unit) * 3);
+    background: linear-gradient(135deg, var(--text-primary) 0%, rgba(255, 255, 255, 0.9) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.jobs-hero-content .subtitle {
+    font-size: 18px;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: calc(var(--spacing-unit) * 2);
+    display: block;
+}
+
+.jobs-hero-content .lead {
+    font-size: 20px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
 .timeline {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: calc(var(--spacing-unit) * 8) var(--spacing-unit);
     position: relative;
+    padding: calc(var(--spacing-unit) * 4) 0;
+    margin: 0 auto;
+    max-width: 1000px;
 }
 
 .timeline::before {
@@ -2116,6 +2143,7 @@ h2 {
         rgba(77, 156, 255, 0.3) 0%,
         rgba(77, 156, 255, 0.1) 100%
     );
+    top: 0;
 }
 
 .timeline-item {
@@ -2154,7 +2182,7 @@ h2 {
 }
 
 .job-card {
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: var(--border-radius-large);
@@ -2166,7 +2194,7 @@ h2 {
 .job-card:hover {
     transform: translateY(-4px);
     border-color: rgba(77, 156, 255, 0.2);
-    box-shadow: var(--box-shadow-hover);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
 
 .job-header {
@@ -2272,7 +2300,7 @@ h2 {
 .jobs-dashboard {
     position: fixed;
     top: 50%;
-    right: 0;
+    right: 32px;
     transform: translateY(-50%);
     z-index: 100;
     padding: calc(var(--spacing-unit) * 4);
@@ -2285,7 +2313,28 @@ h2 {
 }
 
 .jobs-dashboard .dashboard-nav {
-    gap: calc(var(--spacing-unit) * 6);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--spacing-unit) * 3);
+}
+
+.jobs-dashboard .dashboard-nav a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 16px;
+    border-radius: var(--border-radius);
+    transition: all var(--transition-speed);
+    position: relative;
+}
+
+.jobs-dashboard .dashboard-nav a:hover,
+.jobs-dashboard .dashboard-nav a.active {
+    color: var(--primary-color);
+    background: rgba(77, 156, 255, 0.1);
 }
 
 .jobs-dashboard.hidden {
@@ -2314,6 +2363,14 @@ h2 {
 }
 
 @media (max-width: 768px) {
+    .jobs-hero-content h1 {
+        font-size: 36px;
+    }
+
+    .jobs-hero-content .lead {
+        font-size: 18px;
+    }
+
     .job-header h3 {
         font-size: 24px;
     }
@@ -2326,15 +2383,8 @@ h2 {
     .tech-stack {
         gap: calc(var(--spacing-unit));
     }
-}
 
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+    .jobs-page .container {
+        padding: 0 calc(var(--spacing-unit) * 2);
     }
 } 
