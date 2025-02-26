@@ -1155,11 +1155,15 @@ h2 {
 }
 
 .education-logo {
-    margin: calc(var(--spacing-unit) * 2) 0;
-    height: 60px;
+    margin: calc(var(--spacing-unit) * 3) 0;
+    height: 70px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    background: rgba(255, 255, 255, 0.03);
+    padding: calc(var(--spacing-unit) * 2);
+    border-radius: var(--border-radius);
+    transition: all var(--transition-speed);
 }
 
 .education-logo img {
@@ -1167,13 +1171,19 @@ h2 {
     width: auto;
     object-fit: contain;
     filter: brightness(0) invert(1);
-    opacity: 0.9;
-    transition: all var(--transition-speed);
+    opacity: 0.85;
+    transition: all var(--transition-speed) cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.education-card:hover .education-logo {
+    background: rgba(77, 156, 255, 0.05);
+    transform: translateY(-2px);
 }
 
 .education-card:hover .education-logo img {
     opacity: 1;
     transform: scale(1.05);
+    filter: brightness(0) invert(1) drop-shadow(0 2px 4px rgba(77, 156, 255, 0.2));
 }
 
 @media (max-width: 768px) {
