@@ -85,7 +85,7 @@ h2 {
     margin: 0 auto;
     padding: calc(var(--spacing-unit) * 2.5) var(--spacing-unit);
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
@@ -462,8 +462,12 @@ h2 {
     margin-bottom: calc(var(--spacing-unit) * 6);
 }
 
-.footer-left .logo {
-    color: white;
+.footer-left {
+    text-align: center;
+}
+
+.footer-left p {
+    color: var(--text-secondary);
     margin-bottom: calc(var(--spacing-unit) * 2);
 }
 
@@ -1398,7 +1402,7 @@ h2 {
 }
 
 .skills-category:nth-child(4) h3::before {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%234D9CFF' viewBox='0 0 24 24'%3E%3Cpath d='M21 11.5v-1c0-.8-.7-1.5-1.5-1.5H16v-3c0-.8-.7-1.5-1.5-1.5h-1c-.8 0-1.5.7-1.5 1.5v3h-2v-3c0-.8-.7-1.5-1.5-1.5h-1c-.8 0-1.5.7-1.5 1.5v3H4.5C3.7 9 3 9.7 3 10.5v1c0 .8.7 1.5 1.5 1.5H6v2H4.5C3.7 15 3 15.7 3 16.5v1c0 .8.7 1.5 1.5 1.5H6v2h12v-2h2.5c.8 0 1.5-.7 1.5-1.5v-1c0-.8-.7-1.5-1.5-1.5H18v-2h2.5c.8 0 1.5-.7 1.5-1.5z'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%234D9CFF' viewBox='0 0 24 24'%3E%3Cpath d='M21 11.5v-1c0-.8-.7-1.5-1.5-1.5H16v-3c0-.8-.7-1.5-1.5-1.5h-1c-.8 0-1.5.7-1.5 1.5v3h-2v-3c0-.8-.7-1.5-1.5-1.5h-1c-.8 0-1.5.7-1.5 1.5v3H4.5C3.7 9 3 9.7 3 10.5v1c0 .8.7 1.5 1.5 1.5 1.5H6v2H4.5C3.7 15 3 15.7 3 16.5v1c0 .8.7 1.5 1.5 1.5H6v2h12v-2h2.5c.8 0 1.5-.7 1.5-1.5v-1c0-.8-.7-1.5-1.5-1.5H18v-2h2.5c.8 0 1.5-.7 1.5-1.5z'/%3E%3C/svg%3E");
 }
 
 .skills-list {
