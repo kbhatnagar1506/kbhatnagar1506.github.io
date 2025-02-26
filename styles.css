@@ -2046,4 +2046,277 @@ h2 {
     background: linear-gradient(135deg, var(--text-primary) 0%, rgba(255, 255, 255, 0.9) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+/* Jobs Page Styles */
+.jobs-page {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-top: 80px;
+    background: linear-gradient(180deg, var(--background-darker) 0%, var(--background-dark) 100%);
+    min-height: 100vh;
+    position: relative;
+}
+
+.jobs-hero {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.jobs-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, 
+        rgba(77, 156, 255, 0) 0%,
+        rgba(77, 156, 255, 0.2) 50%,
+        rgba(77, 156, 255, 0) 100%
+    );
+}
+
+.jobs-hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: calc(var(--spacing-unit) * 4);
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: var(--border-radius-large);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+}
+
+.timeline {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: calc(var(--spacing-unit) * 8) var(--spacing-unit);
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,
+        rgba(77, 156, 255, 0.3) 0%,
+        rgba(77, 156, 255, 0.1) 100%
+    );
+}
+
+.timeline-item {
+    margin-bottom: calc(var(--spacing-unit) * 12);
+    position: relative;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.timeline-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.timeline-marker {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(77, 156, 255, 0.4);
+    z-index: 2;
+}
+
+.timeline-content {
+    width: calc(50% - 50px);
+    margin-left: calc(50% + 50px);
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    margin-left: 0;
+    margin-right: calc(50% + 50px);
+}
+
+.job-card {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: var(--border-radius-large);
+    padding: calc(var(--spacing-unit) * 4);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all var(--transition-speed);
+}
+
+.job-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(77, 156, 255, 0.2);
+    box-shadow: var(--box-shadow-hover);
+}
+
+.job-header {
+    margin-bottom: calc(var(--spacing-unit) * 4);
+}
+
+.job-date {
+    display: inline-block;
+    padding: 6px 16px;
+    background: rgba(77, 156, 255, 0.15);
+    color: var(--primary-color);
+    border-radius: 980px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: calc(var(--spacing-unit) * 2);
+}
+
+.job-header h3 {
+    font-size: 28px;
+    margin-bottom: calc(var(--spacing-unit) * 2);
+    background: linear-gradient(135deg, var(--text-primary) 0%, rgba(255, 255, 255, 0.9) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.company-info {
+    display: flex;
+    gap: calc(var(--spacing-unit) * 2);
+    color: var(--text-secondary);
+    font-size: 16px;
+}
+
+.company-name {
+    font-weight: 500;
+}
+
+.job-location {
+    color: var(--text-tertiary);
+}
+
+.job-description p {
+    color: var(--text-secondary);
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: calc(var(--spacing-unit) * 3);
+}
+
+.achievements-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.achievements-list li {
+    color: var(--text-secondary);
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: calc(var(--spacing-unit) * 2);
+    padding-left: calc(var(--spacing-unit) * 3);
+    position: relative;
+}
+
+.achievements-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 6px;
+    height: 6px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    transition: all var(--transition-speed);
+}
+
+.achievements-list li:hover::before {
+    transform: scale(1.5);
+    box-shadow: 0 0 10px var(--primary-color);
+}
+
+.tech-stack {
+    margin-top: calc(var(--spacing-unit) * 4);
+    display: flex;
+    flex-wrap: wrap;
+    gap: calc(var(--spacing-unit));
+}
+
+.tech-stack span {
+    padding: 6px 16px;
+    background: rgba(77, 156, 255, 0.15);
+    color: var(--primary-color);
+    border-radius: 980px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all var(--transition-speed);
+}
+
+.tech-stack span:hover {
+    transform: translateY(-2px);
+    background: rgba(77, 156, 255, 0.2);
+    box-shadow: 0 4px 12px rgba(77, 156, 255, 0.15);
+}
+
+.jobs-dashboard {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 100;
+    padding: calc(var(--spacing-unit) * 4);
+    transition: all var(--transition-speed);
+}
+
+.jobs-dashboard .dashboard-nav {
+    gap: calc(var(--spacing-unit) * 6);
+}
+
+.jobs-dashboard.hidden {
+    opacity: 0;
+    transform: translate(100%, -50%);
+    pointer-events: none;
+}
+
+@media (max-width: 1024px) {
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-marker {
+        left: 20px;
+    }
+
+    .timeline-content {
+        width: calc(100% - 60px);
+        margin-left: 60px !important;
+    }
+
+    .jobs-dashboard {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .job-header h3 {
+        font-size: 24px;
+    }
+
+    .company-info {
+        flex-direction: column;
+        gap: calc(var(--spacing-unit));
+    }
+
+    .tech-stack {
+        gap: calc(var(--spacing-unit));
+    }
 } 
