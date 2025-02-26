@@ -1189,24 +1189,90 @@ h2 {
 
 .case-study-dashboard {
     position: fixed;
-    top: 100px;
-    right: calc((100vw - 1400px) / 2 + var(--spacing-unit) * 4);
-    width: 300px;
-    background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: var(--border-radius-large);
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: auto;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--spacing-unit) * 4);
     padding: calc(var(--spacing-unit) * 4);
-    border: 1px solid rgba(255, 255, 255, 0.05);
     transition: all var(--transition-speed);
-    opacity: 1;
-    transform: translateY(0);
+}
+
+.dashboard-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--spacing-unit) * 4);
+}
+
+.dashboard-nav li {
+    margin: 0;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+}
+
+.dashboard-nav a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 32px;
+    font-weight: 600;
+    transition: all var(--transition-speed);
+    padding: calc(var(--spacing-unit) * 2);
+    background: none;
+    border: none;
+    position: relative;
+    white-space: nowrap;
+}
+
+.dashboard-nav a::before {
+    content: '';
+    position: absolute;
+    right: -4px;
+    top: 0;
+    height: 0;
+    width: 2px;
+    background: var(--primary-color);
+    transition: height var(--transition-speed) cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dashboard-nav a:hover {
+    color: var(--primary-color);
+    transform: translateX(-4px);
+    background: none;
+    border: none;
+}
+
+.dashboard-nav a:hover::before {
+    height: 100%;
+}
+
+.dashboard-nav a.active {
+    color: var(--primary-color);
+}
+
+.dashboard-nav a.active::before {
+    height: 100%;
 }
 
 .case-study-dashboard.hidden {
     opacity: 0;
-    transform: translateY(-20px);
+    transform: translate(100%, -50%);
     pointer-events: none;
+}
+
+.dashboard-stats {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    .case-study-dashboard {
+        display: none;
+    }
 }
 
 .case-study-hero {

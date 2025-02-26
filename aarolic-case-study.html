@@ -181,8 +181,12 @@
         // Intersection Observer for image animations
         const images = document.querySelectorAll('.case-study-image');
         const dashboard = document.querySelector('.case-study-dashboard');
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.dashboard-nav a');
         let lastScrollY = window.scrollY;
+        let isScrolling;
 
+        // Image animations
         const imageObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -195,9 +199,45 @@
             imageObserver.observe(image);
         });
 
+        // Section observer for active nav state
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute('id');
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === `#${id}`) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }, { threshold: 0.5 });
+
+        sections.forEach(section => {
+            sectionObserver.observe(section);
+        });
+
+        // Smooth scroll for nav links
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+                
+                if (targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
         // Dashboard visibility on scroll
         window.addEventListener('scroll', () => {
             const currentScrollY = window.scrollY;
+            
+            window.clearTimeout(isScrolling);
             
             if (currentScrollY > lastScrollY) {
                 // Scrolling down
@@ -208,6 +248,11 @@
             }
             
             lastScrollY = currentScrollY;
+
+            // Set a timeout to remove the hidden class after scrolling stops
+            isScrolling = setTimeout(() => {
+                dashboard.classList.remove('hidden');
+            }, 150);
         });
     </script>
 </body>
