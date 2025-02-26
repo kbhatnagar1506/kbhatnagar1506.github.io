@@ -1156,11 +1156,11 @@ h2 {
 
 .education-logo {
     margin: calc(var(--spacing-unit) * 3) 0;
-    height: 70px;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.1);
     padding: calc(var(--spacing-unit) * 2);
     border-radius: var(--border-radius);
     transition: all var(--transition-speed);
@@ -1169,20 +1169,20 @@ h2 {
 .education-logo img {
     height: 100%;
     width: auto;
+    max-width: 200px;
     object-fit: contain;
-    filter: brightness(1) contrast(1);
+    filter: none;
     opacity: 1;
     transition: all var(--transition-speed) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .education-card:hover .education-logo {
-    background: rgba(77, 156, 255, 0.1);
+    background: rgba(77, 156, 255, 0.15);
     transform: translateY(-2px);
 }
 
 .education-card:hover .education-logo img {
     transform: scale(1.05);
-    filter: brightness(1.1) contrast(1.1);
 }
 
 @media (max-width: 768px) {
