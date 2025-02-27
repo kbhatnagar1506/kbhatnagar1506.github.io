@@ -360,16 +360,17 @@
                 <div class="certificates-grid">
                     <article class="certificate-card">
                         <div class="certificate-content">
-                            <div class="certificate-icon">🎓</div>
-                            <h3>Web Development Bootcamp</h3>
-                            <p class="certificate-issuer">Udemy</p>
+                            <div class="certificate-icon">🤖</div>
+                            <h3>CS50's Introduction to AI with Python</h3>
+                            <p class="certificate-issuer">Harvard University via edX</p>
                             <p class="certificate-date">2024</p>
                             <ul class="certificate-details">
-                                <li>Full-stack web development</li>
-                                <li>Modern JavaScript (ES6+)</li>
-                                <li>React.js & Node.js</li>
+                                <li>Machine Learning & Neural Networks</li>
+                                <li>Natural Language Processing</li>
+                                <li>Knowledge Representation</li>
+                                <li>Reinforcement Learning</li>
                             </ul>
-                            <a href="#" class="certificate-link">View Certificate →</a>
+                            <a href="https://www.edx.org/learn/artificial-intelligence/harvard-university-cs50-s-introduction-to-artificial-intelligence-with-python" target="_blank" rel="noopener noreferrer" class="certificate-link">View Course →</a>
                         </div>
                     </article>
 
@@ -398,6 +399,21 @@
                                 <li>User Research</li>
                                 <li>Wireframing & Prototyping</li>
                                 <li>Design Systems</li>
+                            </ul>
+                            <a href="#" class="certificate-link">View Certificate →</a>
+                        </div>
+                    </article>
+
+                    <article class="certificate-card">
+                        <div class="certificate-content">
+                            <div class="certificate-icon">🎓</div>
+                            <h3>Web Development Bootcamp</h3>
+                            <p class="certificate-issuer">Udemy</p>
+                            <p class="certificate-date">2024</p>
+                            <ul class="certificate-details">
+                                <li>Full-stack web development</li>
+                                <li>Modern JavaScript (ES6+)</li>
+                                <li>React.js & Node.js</li>
                             </ul>
                             <a href="#" class="certificate-link">View Certificate →</a>
                         </div>
@@ -431,25 +447,30 @@
                         </div>
                     </div>
                 </div>
-                <form class="contact-form">
+                <form class="contact-form" id="contactForm" onsubmit="return handleSubmit(event)">
                     <h3>Send Me a Message</h3>
                     <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" placeholder="Your name" required>
+                        <input type="text" id="name" name="name" placeholder=" " required>
+                        <label for="name">Full Name</label>
+                        <span class="input-icon">👤</span>
                     </div>
                     <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" placeholder="your@email.com" required>
+                        <input type="email" id="email" name="email" placeholder=" " required>
+                        <label for="email">Email Address</label>
+                        <span class="input-icon">📧</span>
                     </div>
                     <div class="form-group">
+                        <input type="text" id="subject" name="subject" placeholder=" " required>
                         <label for="subject">Subject</label>
-                        <input type="text" id="subject" placeholder="What's this about?" required>
+                        <span class="input-icon">📝</span>
                     </div>
                     <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" placeholder="Tell me about your project, idea, or just say hi!" required></textarea>
+                        <textarea id="message" name="message" placeholder=" " required></textarea>
+                        <label for="message">Your Message</label>
                     </div>
-                    <button type="submit" class="primary-button">Send Message</button>
+                    <button type="submit" class="primary-button">
+                        Send Message
+                    </button>
                 </form>
             </div>
         </section>
@@ -545,6 +566,67 @@
             }
             lastScroll = currentScroll;
         });
+
+        // Contact form handling
+        function handleSubmit(event) {
+            event.preventDefault();
+            
+            const form = event.target;
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData.entries());
+            
+            // Add loading state
+            const submitButton = form.querySelector('button[type="submit"]');
+            const originalText = submitButton.textContent;
+            submitButton.textContent = 'Sending...';
+            submitButton.disabled = true;
+            
+            // Simulate form submission (replace with actual API call)
+            setTimeout(() => {
+                console.log('Form data:', data);
+                
+                // Show success message
+                form.innerHTML = `
+                    <div style="text-align: center; padding: 2rem;">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">✨</div>
+                        <h3 style="margin-bottom: 1rem;">Message Sent Successfully!</h3>
+                        <p style="color: var(--text-secondary);">Thank you for reaching out. I'll get back to you soon!</p>
+                        <button onclick="resetForm()" class="primary-button" style="margin-top: 2rem;">Send Another Message</button>
+                    </div>
+                `;
+            }, 1500);
+            
+            return false;
+        }
+        
+        function resetForm() {
+            const form = document.getElementById('contactForm');
+            form.innerHTML = `
+                <h3>Send Me a Message</h3>
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder=" " required>
+                    <label for="name">Full Name</label>
+                    <span class="input-icon">👤</span>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder=" " required>
+                    <label for="email">Email Address</label>
+                    <span class="input-icon">📧</span>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="subject" name="subject" placeholder=" " required>
+                    <label for="subject">Subject</label>
+                    <span class="input-icon">📝</span>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" placeholder=" " required></textarea>
+                    <label for="message">Your Message</label>
+                </div>
+                <button type="submit" class="primary-button">
+                    Send Message
+                </button>
+            `;
+        }
     </script>
 </body>
 </html> 
