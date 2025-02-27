@@ -1,15 +1,15 @@
 /* Reset and base styles */
 :root {
     /* Dark Theme Colors */
-    --background-darker: #0A0C10;
-    --background-dark: #12141A;
-    --text-primary: #E6EDF3;
-    --text-secondary: #8B949E;
-    --text-tertiary: #6E7681;
+    --background-darker: #000000;
+    --background-dark: #000000;
+    --text-primary: #FFFFFF;
+    --text-secondary: #CCCCCC;
+    --text-tertiary: #999999;
     --primary-color: #4D9CFF;
     --primary-color-dark: #1F6FEB;
     --gradient-primary: linear-gradient(135deg, #4D9CFF 0%, #1F6FEB 100%);
-    --gradient-secondary: linear-gradient(135deg, #8B949E 0%, #6E7681 100%);
+    --gradient-secondary: linear-gradient(135deg, #CCCCCC 0%, #999999 100%);
     
     /* Spacing */
     --spacing-unit: 8px;
@@ -20,8 +20,8 @@
     --border-radius-large: 16px;
     
     /* Shadows */
-    --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
-    --box-shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.35);
+    --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    --box-shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.7);
     
     /* Transitions */
     --transition-speed: 0.3s;
@@ -76,7 +76,7 @@ h2 {
 
 /* Header and Navigation */
 .header {
-    background: rgba(10, 12, 16, 0.8);
+    background: rgba(0, 0, 0, 0.95);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
@@ -88,7 +88,7 @@ h2 {
 }
 
 .header.scrolled {
-    background: rgba(10, 12, 16, 0.95);
+    background: rgba(0, 0, 0, 0.98);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -236,10 +236,7 @@ h2 {
     grid-template-columns: 1fr 1fr;
     align-items: center;
     padding: 0;
-    background: linear-gradient(180deg, 
-        var(--background-darker) 0%,
-        var(--background-dark) 100%
-    );
+    background: #000000;
     position: relative;
     overflow: hidden;
 }
@@ -266,7 +263,7 @@ h2 {
     margin-left: calc(var(--spacing-unit) * 8);
     position: relative;
     z-index: 1;
-    background: rgba(10, 12, 16, 0.6);
+    background: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: var(--border-radius-large);
@@ -379,7 +376,7 @@ h2 {
 /* About Section */
 .about {
     padding: calc(var(--spacing-unit) * 12) var(--spacing-unit);
-    background: linear-gradient(180deg, var(--background-darker) 0%, var(--background-dark) 100%);
+    background: #000000;
     position: relative;
     overflow: hidden;
 }
@@ -489,7 +486,7 @@ h2 {
 /* Projects Section */
 .projects {
     padding: calc(var(--spacing-unit) * 12) var(--spacing-unit);
-    background: linear-gradient(180deg, var(--background-dark) 0%, var(--background-darker) 100%);
+    background: #000000;
     position: relative;
     overflow: hidden;
 }
@@ -518,7 +515,7 @@ h2 {
 }
 
 .project-card {
-    background: rgba(10, 12, 16, 0.6);
+    background: rgba(0, 0, 0, 0.9);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: var(--border-radius-large);
@@ -655,7 +652,7 @@ h2 {
 /* Contact Section */
 .contact {
     padding: calc(var(--spacing-unit) * 12) var(--spacing-unit);
-    background: linear-gradient(180deg, var(--background-darker) 0%, var(--background-dark) 100%);
+    background: #000000;
     position: relative;
     overflow: hidden;
 }
@@ -677,7 +674,7 @@ h2 {
 .contact-content {
     max-width: 600px;
     margin: 0 auto;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.9);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: var(--border-radius-large);
@@ -763,7 +760,7 @@ h2 {
 
 /* Footer */
 .footer {
-    background: var(--background-darker);
+    background: #000000;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
     padding: calc(var(--spacing-unit) * 6) 0;
     position: relative;
@@ -895,7 +892,7 @@ h2 {
 /* Certificates Section */
 .certificates {
     padding: calc(var(--spacing-unit) * 12) var(--spacing-unit);
-    background-color: var(--background-darker);
+    background-color: #000000;
 }
 
 .certificates-content {
@@ -911,7 +908,7 @@ h2 {
 }
 
 .certificate-card {
-    background: #000000;
+    background: rgba(0, 0, 0, 0.9);
     border-radius: var(--border-radius);
     overflow: hidden;
     transition: transform var(--transition-speed), box-shadow var(--transition-speed);
@@ -1404,7 +1401,7 @@ h2 {
 /* Education Section */
 .education {
     padding: calc(var(--spacing-unit) * 12) var(--spacing-unit);
-    background-color: var(--background-darker);
+    background-color: #000000;
     position: relative;
     overflow: hidden;
 }
@@ -1437,7 +1434,7 @@ h2 {
 }
 
 .education-card {
-    background: rgba(10, 12, 16, 0.6);
+    background: rgba(0, 0, 0, 0.9);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: var(--border-radius-large);
@@ -1605,7 +1602,7 @@ h2 {
 /* Skills Section */
 .skills {
     padding: calc(var(--spacing-unit) * 12) var(--spacing-unit);
-    background: linear-gradient(180deg, var(--background-darker) 0%, var(--background-dark) 100%);
+    background: #000000;
     position: relative;
     overflow: hidden;
 }
@@ -1662,7 +1659,7 @@ h2 {
 }
 
 .skills-category {
-    background: rgba(10, 12, 16, 0.6);
+    background: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: var(--border-radius-large);
@@ -1861,7 +1858,7 @@ h2 {
 /* Experience Section */
 .experience {
     padding: calc(var(--spacing-unit) * 12) var(--spacing-unit);
-    background: linear-gradient(180deg, var(--background-dark) 0%, var(--background-darker) 100%);
+    background: #000000;
     position: relative;
     overflow: hidden;
 }
@@ -1934,7 +1931,7 @@ h2 {
 
 .experience-card {
     width: 100%;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.9);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: var(--border-radius-large);
@@ -2091,7 +2088,7 @@ section::before {
 
 /* Enhanced Cards */
 .card {
-    background: rgba(18, 20, 26, 0.6);
+    background: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.05);
