@@ -192,7 +192,14 @@
             const timelineItems = document.querySelectorAll('.timeline-item');
             const jobsDashboard = document.querySelector('.jobs-dashboard');
             let lastScrollY = window.scrollY;
+            let isScrolling;
 
+            // Initialize all timeline items as visible
+            timelineItems.forEach(item => {
+                item.classList.add('visible');
+            });
+
+            // Intersection Observer for timeline items
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -200,7 +207,8 @@
                     }
                 });
             }, {
-                threshold: 0.2
+                threshold: 0.2,
+                rootMargin: '0px 0px -10% 0px'
             });
 
             timelineItems.forEach(item => observer.observe(item));
@@ -209,17 +217,18 @@
             const handleScroll = () => {
                 const currentScrollY = window.scrollY;
                 
+                clearTimeout(isScrolling);
+                
                 if (currentScrollY > lastScrollY) {
                     jobsDashboard.classList.add('hidden');
                 } else {
                     jobsDashboard.classList.remove('hidden');
                 }
-
+                
                 lastScrollY = currentScrollY;
 
                 // Show dashboard after scrolling stops
-                clearTimeout(window.scrollEndTimer);
-                window.scrollEndTimer = setTimeout(() => {
+                isScrolling = setTimeout(() => {
                     jobsDashboard.classList.remove('hidden');
                 }, 150);
             };
@@ -240,22 +249,24 @@
             });
 
             // Update active section in dashboard
-            const sections = document.querySelectorAll('section[id]');
+            const sections = document.querySelectorAll('.timeline-item');
             const navLinks = document.querySelectorAll('.jobs-dashboard a[href^="#"]');
 
             const sectionObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
+                        const id = entry.target.id;
                         navLinks.forEach(link => {
                             link.classList.remove('active');
-                            if (link.getAttribute('href').slice(1) === entry.target.id) {
+                            if (link.getAttribute('href') === `#${id}`) {
                                 link.classList.add('active');
                             }
                         });
                     }
                 });
             }, {
-                threshold: 0.5
+                threshold: 0.5,
+                rootMargin: '-20% 0px -35% 0px'
             });
 
             sections.forEach(section => sectionObserver.observe(section));

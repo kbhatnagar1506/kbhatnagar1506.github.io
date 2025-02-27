@@ -1,11 +1,10 @@
 /* Reset and base styles */
 :root {
-    --primary-color: #4D9CFF;
-    --primary-light: rgba(77, 156, 255, 0.1);
+    --primary-color: #4d9cff;
     --secondary-color: #1E1E1E;
-    --background-dark: #000000;
+    --background-dark: #121212;
     --background-darker: #0a0a0a;
-    --text-primary: #FFFFFF;
+    --text-primary: #ffffff;
     --text-secondary: rgba(255, 255, 255, 0.8);
     --text-tertiary: rgba(255, 255, 255, 0.6);
     --spacing-unit: 8px;
@@ -15,7 +14,7 @@
     --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     --box-shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.12);
     --gradient-primary: linear-gradient(135deg, #4D9CFF 0%, #2E7FFF 100%);
-    --gradient-dark: linear-gradient(135deg, #000000 0%, #000000 100%);
+    --gradient-dark: linear-gradient(180deg, var(--background-darker) 0%, var(--background-dark) 100%);
 }
 
 * {
@@ -31,12 +30,13 @@ html {
 }
 
 body {
-    font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif;
-    line-height: 1.47059;
+    font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    line-height: 1.6;
     font-weight: 400;
     letter-spacing: -0.022em;
     color: var(--text-primary);
     background-color: var(--background-dark);
+    overflow-x: hidden;
 }
 
 /* Typography */
@@ -2051,7 +2051,7 @@ h2 {
 /* Jobs Page Styles */
 .jobs-page {
     min-height: 100vh;
-    background: var(--background-dark);
+    background: var(--gradient-dark);
     color: var(--text-primary);
     padding-top: 80px;
     position: relative;
@@ -2063,6 +2063,11 @@ h2 {
     margin: 0 auto;
     padding: 0 var(--spacing-unit);
     position: relative;
+}
+
+.jobs-main {
+    position: relative;
+    z-index: 1;
 }
 
 .jobs-hero {
@@ -2108,6 +2113,7 @@ h2 {
     background: linear-gradient(135deg, var(--text-primary) 0%, rgba(255, 255, 255, 0.9) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-weight: 700;
 }
 
 .jobs-hero-content .subtitle {
@@ -2117,6 +2123,7 @@ h2 {
     letter-spacing: 2px;
     margin-bottom: calc(var(--spacing-unit) * 2);
     display: block;
+    font-weight: 500;
 }
 
 .jobs-hero-content .lead {
@@ -2218,6 +2225,7 @@ h2 {
     background: linear-gradient(135deg, var(--text-primary) 0%, rgba(255, 255, 255, 0.9) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-weight: 600;
 }
 
 .company-info {
@@ -2329,6 +2337,7 @@ h2 {
     border-radius: var(--border-radius);
     transition: all var(--transition-speed);
     position: relative;
+    white-space: nowrap;
 }
 
 .jobs-dashboard .dashboard-nav a:hover,
@@ -2386,5 +2395,16 @@ h2 {
 
     .jobs-page .container {
         padding: 0 calc(var(--spacing-unit) * 2);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 } 
