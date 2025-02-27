@@ -1687,7 +1687,7 @@ h2 {
 }
 
 .skills-category:nth-child(4) h3::before {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%234D9CFF' viewBox='0 0 24 24'%3E%3Cpath d='M21 11.5v-1c0-.8-.7-1.5-1.5-1.5H16v-3c0-.8-.7-1.5-1.5-1.5h-1c-.8 0-1.5.7-1.5 1.5v3h-2v-3c0-.8-.7-1.5-1.5-1.5h-1c-.8 0-1.5.7-1.5 1.5v3H4.5C3.7 9 3 9.7 3 10.5v1c0 .8.7 1.5 1.5 1.5 1.5H6v2H4.5C3.7 15 3 15.7 3 16.5v1c0 .8.7 1.5 1.5 1.5H6v2h12v-2h2.5c.8 0 1.5-.7 1.5-1.5v-1c0-.8-.7-1.5-1.5-1.5-1.5H18v-2h2.5c.8 0 1.5-.7 1.5-1.5z'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%234D9CFF' viewBox='0 0 24 24'%3E%3Cpath d='M21 11.5v-1c0-.8-.7-1.5-1.5-1.5H16v-3c0-.8-.7-1.5-1.5-1.5h-1c-.8 0-1.5.7-1.5 1.5v3H4.5C3.7 9 3 9.7 3 10.5v1c0 .8.7 1.5 1.5 1.5 1.5H6v2H4.5C3.7 15 3 15.7 3 16.5v1c0 .8.7 1.5 1.5 1.5 1.5H6v2h12v-2h2.5c.8 0 1.5-.7 1.5-1.5v-1c0-.8-.7-1.5-1.5-1.5-1.5H18v-2h2.5c.8 0 1.5-.7 1.5-1.5z'/%3E%3C/svg%3E");
 }
 
 .skills-list {
@@ -1889,60 +1889,18 @@ h2 {
 }
 
 .experience-card {
-    width: calc(50% - calc(var(--spacing-unit) * 4));
+    width: 100%;
     background: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: var(--border-radius-large);
-    padding: calc(var(--spacing-unit) * 4);
+    padding: calc(var(--spacing-unit) * 6);
     box-shadow: var(--box-shadow);
     border: 1px solid rgba(255, 255, 255, 0.05);
     transition: all var(--transition-speed) cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
-    margin-left: auto;
-}
-
-.experience-card:nth-child(odd) {
-    margin-left: 0;
-    margin-right: auto;
-}
-
-.experience-card::before {
-    content: '';
-    position: absolute;
-    top: 24px;
-    width: calc(var(--spacing-unit) * 4);
-    height: 2px;
-    background: linear-gradient(90deg,
-        rgba(77, 156, 255, 0.3) 0%,
-        rgba(77, 156, 255, 0.1) 100%
-    );
-    right: -32px;
-}
-
-.experience-card:nth-child(odd)::before {
-    left: -32px;
-    background: linear-gradient(90deg,
-        rgba(77, 156, 255, 0.1) 0%,
-        rgba(77, 156, 255, 0.3) 100%
-    );
-}
-
-.experience-card::after {
-    content: '';
-    position: absolute;
-    top: 20px;
-    right: -40px;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: var(--primary-color);
-    box-shadow: 0 0 0 4px rgba(77, 156, 255, 0.1);
-    transition: all var(--transition-speed);
-}
-
-.experience-card:nth-child(odd)::after {
-    left: -40px;
+    margin: 0 auto;
+    max-width: 1000px;
 }
 
 .experience-card:hover {
@@ -1951,160 +1909,112 @@ h2 {
     border-color: rgba(77, 156, 255, 0.2);
 }
 
-.experience-card:hover::after {
-    transform: scale(1.4);
-    box-shadow: 0 0 0 6px rgba(77, 156, 255, 0.2);
+.company-description {
+    color: var(--text-secondary);
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: calc(var(--spacing-unit) * 4);
+    padding: calc(var(--spacing-unit) * 3);
+    background: rgba(77, 156, 255, 0.05);
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(77, 156, 255, 0.1);
 }
 
-.experience-header {
+.key-achievements,
+.company-highlights {
     margin-bottom: calc(var(--spacing-unit) * 4);
 }
 
-.experience-date {
-    display: inline-block;
-    padding: 6px 16px;
-    background: rgba(77, 156, 255, 0.15);
-    color: var(--primary-color);
-    border-radius: 980px;
-    font-size: 14px;
-    font-weight: 500;
-    margin-bottom: calc(var(--spacing-unit) * 2);
-}
-
-.experience-header h3 {
-    font-size: 24px;
-    margin-bottom: calc(var(--spacing-unit) * 2);
+.key-achievements h4,
+.company-highlights h4 {
+    font-size: 20px;
+    margin-bottom: calc(var(--spacing-unit) * 3);
+    color: var(--text-primary);
     background: linear-gradient(135deg, var(--text-primary) 0%, rgba(255, 255, 255, 0.9) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-.company-info {
-    display: flex;
-    align-items: center;
-    gap: calc(var(--spacing-unit) * 2);
-    color: var(--text-secondary);
-    font-size: 16px;
-}
-
-.company-name {
-    font-weight: 500;
-}
-
-.company-location {
-    color: var(--text-tertiary);
-    display: flex;
-    align-items: center;
-}
-
-.company-location::before {
-    content: '•';
-    margin-right: calc(var(--spacing-unit) * 2);
-}
-
-.experience-details ul {
+.highlight-list {
     list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: calc(var(--spacing-unit) * 3);
     margin-bottom: calc(var(--spacing-unit) * 4);
 }
 
-.experience-details li {
+.highlight-list li {
     color: var(--text-secondary);
     font-size: 16px;
     line-height: 1.6;
-    margin-bottom: calc(var(--spacing-unit) * 2);
-    padding-left: calc(var(--spacing-unit) * 3);
+    padding-left: calc(var(--spacing-unit) * 4);
     position: relative;
+    transition: all var(--transition-speed);
+    display: flex;
+    align-items: center;
+}
+
+.highlight-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-size: 18px;
+    font-weight: bold;
     transition: all var(--transition-speed);
 }
 
-.experience-details li:hover {
+.highlight-list li:hover {
     color: var(--text-primary);
     transform: translateX(4px);
 }
 
-.experience-details li::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 10px;
-    width: 6px;
-    height: 6px;
-    background: var(--primary-color);
-    border-radius: 50%;
-    transition: all var(--transition-speed);
+.highlight-list li:hover::before {
+    transform: scale(1.2);
+    text-shadow: 0 0 10px var(--primary-color);
 }
 
-.experience-details li:hover::before {
-    transform: scale(1.5);
-    box-shadow: 0 0 10px var(--primary-color);
-}
-
-.tech-stack {
-    display: flex;
-    flex-wrap: wrap;
-    gap: calc(var(--spacing-unit));
-}
-
-.tech-stack span {
-    background: rgba(77, 156, 255, 0.15);
+.company-link {
+    display: inline-flex;
+    align-items: center;
     color: var(--primary-color);
-    padding: 4px 12px;
-    border-radius: 980px;
-    font-size: 14px;
+    text-decoration: none;
     font-weight: 500;
+    font-size: 16px;
+    margin-top: calc(var(--spacing-unit) * 4);
+    padding: calc(var(--spacing-unit) * 2) calc(var(--spacing-unit) * 4);
+    background: rgba(77, 156, 255, 0.1);
+    border-radius: 980px;
+    border: 1px solid rgba(77, 156, 255, 0.2);
     transition: all var(--transition-speed);
-    border: 1px solid rgba(77, 156, 255, 0.1);
 }
 
-.tech-stack span:hover {
-    transform: translateY(-2px);
+.company-link .arrow {
+    margin-left: var(--spacing-unit);
+    transition: transform var(--transition-speed);
+}
+
+.company-link:hover {
     background: rgba(77, 156, 255, 0.2);
-    border-color: rgba(77, 156, 255, 0.2);
+    transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(77, 156, 255, 0.15);
 }
 
-@media (max-width: 968px) {
-    .experience-timeline::before {
-        left: 0;
-    }
-
-    .experience-card {
-        width: calc(100% - calc(var(--spacing-unit) * 4));
-        margin-left: calc(var(--spacing-unit) * 4);
-    }
-
-    .experience-card:nth-child(odd) {
-        margin-left: calc(var(--spacing-unit) * 4);
-        margin-right: 0;
-    }
-
-    .experience-card::before {
-        left: -32px;
-        width: calc(var(--spacing-unit) * 4);
-        background: linear-gradient(90deg,
-            rgba(77, 156, 255, 0.1) 0%,
-            rgba(77, 156, 255, 0.3) 100%
-        );
-    }
-
-    .experience-card::after {
-        left: -40px;
-    }
+.company-link:hover .arrow {
+    transform: translateX(4px);
 }
 
 @media (max-width: 768px) {
     .experience-card {
-        width: 100%;
-        margin-left: 0;
+        padding: calc(var(--spacing-unit) * 3);
     }
 
-    .experience-card:nth-child(odd) {
-        margin-left: 0;
+    .highlight-list {
+        grid-template-columns: 1fr;
     }
 
-    .experience-timeline::before,
-    .experience-card::before,
-    .experience-card::after {
-        display: none;
+    .company-description {
+        font-size: 16px;
+        padding: calc(var(--spacing-unit) * 2);
     }
 } 
