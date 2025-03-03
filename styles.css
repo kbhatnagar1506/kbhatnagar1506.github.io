@@ -955,30 +955,23 @@ h2::after, .section-heading::after {
 
 /* Footer */
 .footer {
-    background: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(10px);
-    padding: 4rem 0 2rem;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 1rem 0;
     position: relative;
-    overflow: hidden;
-}
-
-.footer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: linear-gradient(90deg, 
-        rgba(255, 255, 255, 0),
-        rgba(255, 255, 255, 0.3),
-        rgba(255, 255, 255, 0));
+    width: 100%;
 }
 
 .footer-content {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
+    text-align: center;
+}
+
+.copyright {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    margin: 0;
 }
 
 .footer-stats {
