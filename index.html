@@ -6,6 +6,7 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://developer.apple.com/fonts/sf-pro/sf-pro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
     <header class="header">
@@ -29,16 +30,55 @@
 
     <main>
         <section id="home" class="hero">
-            <div class="hero-content">
-                <h1>I'm Krishna,<br>a Software Engineer,<br>Mobile App/Web Developer<br>& AI Enthusiast</h1>
-                <p>A passionate full-stack developer crafting innovative digital solutions with a focus on user experience and technical excellence. Currently pursuing Computer Science at Georgia State University while building impactful applications that merge creativity with cutting-edge technology.</p>
-                <div class="cta-buttons">
-                    <a href="#projects" class="primary-button">View Projects</a>
-                    <a href="#contact" class="secondary-button">Get in Touch</a>
-                </div>
+            <div class="hero-background">
+                <div class="gradient-overlay"></div>
+                <div class="particles" id="particles-js"></div>
             </div>
-            <div class="hero-image">
-                <img src="assets/profile.png" alt="Krishna Bhatnagar - Web Developer">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="title-wrapper">
+                        <h1 class="glitch" data-text="I'm Krishna">I'm Krishna</h1>
+                        <div class="roles">
+                            <span class="role">Software Engineer</span>
+                            <span class="role">Mobile App Developer</span>
+                            <span class="role">Web Developer</span>
+                            <span class="role">AI Enthusiast</span>
+                        </div>
+                    </div>
+                    <p class="hero-description">A passionate full-stack developer crafting innovative digital solutions with a focus on user experience and technical excellence. Currently pursuing Computer Science at Georgia State University while building impactful applications that merge creativity with cutting-edge technology.</p>
+                    <div class="cta-buttons">
+                        <a href="#projects" class="primary-button">
+                            <span class="button-text">View Projects</span>
+                            <span class="button-icon">→</span>
+                        </a>
+                        <a href="#contact" class="secondary-button">
+                            <span class="button-text">Get in Touch</span>
+                            <span class="button-icon">✉</span>
+                        </a>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/kbhatnagar1506" target="_blank" rel="noopener noreferrer" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/krishna-bhatnagar-dev" target="_blank" rel="noopener noreferrer" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:kbhatnagar1506@gmail.com" class="social-link">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-wrapper">
+                        <img src="assets/profile.png" alt="Krishna Bhatnagar - Web Developer" class="profile-image">
+                        <div class="floating-skills">
+                            <span class="skill-bubble">Swift</span>
+                            <span class="skill-bubble">React</span>
+                            <span class="skill-bubble">AI</span>
+                            <span class="skill-bubble">Python</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -707,6 +747,76 @@
                 </button>
             `;
         }
+    </script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS('particles-js', {
+            particles: {
+                number: {
+                    value: 80,
+                    density: {
+                        enable: true,
+                        value_area: 800
+                    }
+                },
+                color: {
+                    value: '#ffffff'
+                },
+                shape: {
+                    type: 'circle'
+                },
+                opacity: {
+                    value: 0.2,
+                    random: true
+                },
+                size: {
+                    value: 3,
+                    random: true
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: '#ffffff',
+                    opacity: 0.1,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 2,
+                    direction: 'none',
+                    random: true,
+                    straight: false,
+                    out_mode: 'out',
+                    bounce: false
+                }
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: {
+                    onhover: {
+                        enable: true,
+                        mode: 'grab'
+                    },
+                    onclick: {
+                        enable: true,
+                        mode: 'push'
+                    },
+                    resize: true
+                },
+                modes: {
+                    grab: {
+                        distance: 140,
+                        line_linked: {
+                            opacity: 0.3
+                        }
+                    },
+                    push: {
+                        particles_nb: 4
+                    }
+                }
+            },
+            retina_detect: true
+        });
     </script>
 </body>
 </html> 
