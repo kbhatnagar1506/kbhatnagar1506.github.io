@@ -7,6 +7,48 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://developer.apple.com/fonts/sf-pro/sf-pro.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .typing-text, .typing-role, .hero-description {
+            background: linear-gradient(to right, #ffffff 20%, #808080);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            width: 100%;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .typing-text.visible,
+        .typing-role.visible,
+        .hero-description.visible {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .typing-text {
+            transition-delay: 0.2s;
+        }
+
+        .typing-role {
+            transition-delay: 0.6s;
+        }
+
+        .hero-description {
+            max-width: 800px;
+            line-height: 1.6;
+            margin: 1rem auto;
+            text-align: left;
+            transition-delay: 1s;
+        }
+
+        .hero-description p {
+            margin-bottom: 1rem;
+        }
+    </style>
 </head>
 <body>
     <header class="header">
@@ -36,60 +78,35 @@
             </div>
             <div class="hero-content">
                 <div class="hero-text">
-                    <div class="title-wrapper">
-                        <h1 class="glitch" data-text="I'm Krishna">I'm Krishna</h1>
-                        <div class="roles">
-                            <span class="role">Software Engineer</span>
-                            <span class="role">Mobile App Developer</span>
-                            <span class="role">Web Developer</span>
-                            <span class="role">AI Enthusiast</span>
-                        </div>
+                    <h1 class="main-title">
+                        <span class="typing-text"></span>
+                        <span class="cursor">|</span>
+                    </h1>
+                    <div class="roles">
+                        <p class="role typing-role"></p>
                     </div>
-                    <p class="hero-description">A passionate full-stack developer crafting innovative digital solutions with a focus on user experience and technical excellence. Currently pursuing Computer Science at Georgia State University while building impactful applications that merge creativity with cutting-edge technology.</p>
-                    <div class="cta-buttons">
-                        <a href="#projects" class="primary-button">
-                            <span class="button-text">View Projects</span>
-                            <span class="button-icon">→</span>
-                        </a>
-                        <a href="#contact" class="secondary-button">
-                            <span class="button-text">Get in Touch</span>
-                            <span class="button-icon">✉</span>
-                        </a>
-                    </div>
-                    <div class="social-links">
-                        <a href="https://github.com/kbhatnagar1506" target="_blank" rel="noopener noreferrer" class="social-link">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://linkedin.com/in/krishna-bhatnagar-dev" target="_blank" rel="noopener noreferrer" class="social-link">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="mailto:kbhatnagar1506@gmail.com" class="social-link">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <div class="image-wrapper">
-                        <img src="assets/profile.png" alt="Krishna Bhatnagar - Web Developer" class="profile-image">
-                        <div class="floating-skills">
-                            <span class="skill-bubble">Swift</span>
-                            <span class="skill-bubble">React</span>
-                            <span class="skill-bubble">AI</span>
-                            <span class="skill-bubble">Python</span>
-                        </div>
-                    </div>
+                    <p class="hero-description typing-description"></p>
                 </div>
             </div>
         </section>
 
         <section id="about" class="about">
-            <h2>About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p class="lead">Turning complex challenges into elegant digital solutions through innovative code and creative thinking.</p>
-                    <p>As an emerging software engineer and Computer Science student at Georgia State University, I combine fresh perspectives with technical expertise to create impactful digital solutions. My journey spans from developing healthcare platforms to crafting modern web applications, always with a focus on user experience and technical excellence.</p>
-                    <p>I specialize in building full-stack applications that leverage cutting-edge technologies. My work includes developing AI-integrated healthcare solutions, creating responsive web applications, and implementing innovative mobile apps that prioritize both performance and accessibility.</p>
-                    <p>Driven by curiosity and a passion for technology, I'm constantly exploring new frameworks and methodologies. I believe in writing clean, efficient code that not only solves problems but creates meaningful experiences for users.</p>
+            <div class="section-container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-grid">
+                        <div class="about-text">
+                            <p class="lead">Turning complex challenges into elegant digital solutions through innovative code and creative thinking.</p>
+                            <p>As an emerging software engineer and Computer Science student at Georgia State University, I combine fresh perspectives with technical expertise to create impactful digital solutions. My journey spans from developing healthcare platforms to crafting modern web applications, always with a focus on user experience and technical excellence.</p>
+                            <p>I specialize in building full-stack applications that leverage cutting-edge technologies. My work includes developing AI-integrated healthcare solutions, creating responsive web applications, and implementing innovative mobile apps that prioritize both performance and accessibility.</p>
+                            <p>Driven by curiosity and a passion for technology, I'm constantly exploring new frameworks and methodologies. I believe in writing clean, efficient code that not only solves problems but creates meaningful experiences for users.</p>
+                        </div>
+                        <div class="about-image">
+                            <div class="image-wrapper">
+                                <img src="assets/profile.png" alt="Krishna Bhatnagar" class="profile-image">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -648,7 +665,39 @@
         </div>
     </footer>
     <script>
-        // Intersection Observer for skill bars animation
+        const mainTitle = "Hi! I'm Krishna Bhatnagar";
+        const roleText = "Software Engineer & Full-Stack Developer | AI/ML Enthusiast";
+        const descriptionText = `Crafting innovative digital solutions at the intersection of mobile development and artificial intelligence. Currently pursuing Computer Science at Georgia State University, focusing on building scalable applications that push technological boundaries.
+
+        With expertise in full-stack development, AI integration, and a strong foundation in data structures & algorithms, I transform complex challenges into elegant solutions. My work spans from developing AI-powered healthcare platforms to creating intuitive mobile applications. Let's collaborate and build something extraordinary that makes a real impact!`;
+
+        function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+
+        async function animateText() {
+            const titleElement = document.querySelector('.typing-text');
+            const roleElement = document.querySelector('.typing-role');
+            const descriptionElement = document.querySelector('.typing-description');
+            
+            titleElement.textContent = mainTitle;
+            roleElement.textContent = roleText;
+            descriptionElement.innerHTML = descriptionText.split('\n\n').map(para => `<p>${para.trim()}</p>`).join('');
+            
+            await sleep(200);
+            titleElement.classList.add('visible');
+            await sleep(400);
+            roleElement.classList.add('visible');
+            await sleep(400);
+            descriptionElement.classList.add('visible');
+        }
+
+        // Remove cursor element from HTML
+        document.querySelector('.cursor')?.remove();
+
+        // Start animation when page loads
+        animateText();
+
         const observeSkills = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -659,12 +708,10 @@
             threshold: 0.2
         });
 
-        // Observe all skill categories
         document.querySelectorAll('.skills-category').forEach(category => {
             observeSkills.observe(category);
         });
 
-        // Mobile menu toggle
         const menuToggle = document.querySelector('.menu-toggle');
         const navLinks = document.querySelector('.nav-links');
         
@@ -673,7 +720,6 @@
             menuToggle.classList.toggle('active');
         });
 
-        // Header scroll effect
         const header = document.querySelector('.header');
         let lastScroll = 0;
 
@@ -687,7 +733,6 @@
             lastScroll = currentScroll;
         });
 
-        // Contact form handling
         function handleSubmit(event) {
             event.preventDefault();
             
@@ -695,17 +740,14 @@
             const formData = new FormData(form);
             const data = Object.fromEntries(formData.entries());
             
-            // Add loading state
             const submitButton = form.querySelector('button[type="submit"]');
             const originalText = submitButton.textContent;
             submitButton.textContent = 'Sending...';
             submitButton.disabled = true;
             
-            // Simulate form submission (replace with actual API call)
             setTimeout(() => {
                 console.log('Form data:', data);
                 
-                // Show success message
                 form.innerHTML = `
                     <div style="text-align: center; padding: 2rem;">
                         <div style="font-size: 3rem; margin-bottom: 1rem;">✨</div>
@@ -753,7 +795,7 @@
         particlesJS('particles-js', {
             particles: {
                 number: {
-                    value: 80,
+                    value: 100,
                     density: {
                         enable: true,
                         value_area: 800
@@ -766,12 +808,24 @@
                     type: 'circle'
                 },
                 opacity: {
-                    value: 0.2,
-                    random: true
+                    value: 0.15,
+                    random: true,
+                    anim: {
+                        enable: true,
+                        speed: 1,
+                        opacity_min: 0.05,
+                        sync: false
+                    }
                 },
                 size: {
                     value: 3,
-                    random: true
+                    random: true,
+                    anim: {
+                        enable: true,
+                        speed: 2,
+                        size_min: 0.1,
+                        sync: false
+                    }
                 },
                 line_linked: {
                     enable: true,
@@ -782,12 +836,17 @@
                 },
                 move: {
                     enable: true,
-                    speed: 2,
+                    speed: 1,
                     direction: 'none',
                     random: true,
                     straight: false,
                     out_mode: 'out',
-                    bounce: false
+                    bounce: false,
+                    attract: {
+                        enable: true,
+                        rotateX: 600,
+                        rotateY: 1200
+                    }
                 }
             },
             interactivity: {
