@@ -666,15 +666,52 @@ h2::after, .section-heading::after {
 @media (max-width: 768px) {
     .hero {
         min-height: 100vh;
-        padding: 0 20px;
+        padding: 0;
         display: flex;
         align-items: center;
         justify-content: center;
-        background: var(--background-darker);
+        background: linear-gradient(180deg, 
+            rgba(0, 0, 0, 1) 0%,
+            rgba(0, 0, 0, 0.98) 100%
+        );
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Add subtle animated gradient background */
+    .hero::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        right: -50%;
+        bottom: -50%;
+        background: radial-gradient(
+            circle at center,
+            rgba(77, 156, 255, 0.03) 0%,
+            rgba(77, 156, 255, 0.01) 45%,
+            transparent 70%
+        );
+        animation: rotateBackground 15s linear infinite;
+        z-index: 1;
+    }
+
+    .hero::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(90deg, 
+            rgba(255, 255, 255, 0) 0%,
+            rgba(77, 156, 255, 0.3) 50%,
+            rgba(255, 255, 255, 0) 100%
+        );
     }
 
     .hero-content {
-        padding: 0;
+        padding: 0 28px;
         width: 100%;
         max-width: 100%;
         text-align: center;
@@ -682,52 +719,72 @@ h2::after, .section-heading::after {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 20px;
+        gap: 28px;
+        position: relative;
+        z-index: 2;
+        animation: fadeIn 1s ease-out;
     }
 
     .main-title {
-        font-size: 32px;
-        line-height: 1.3;
+        font-size: 38px;
+        line-height: 1.2;
         margin-bottom: 0;
-        background: linear-gradient(to right, #ffffff, #808080);
+        background: linear-gradient(135deg, 
+            #FFFFFF 0%,
+            rgba(255, 255, 255, 0.8) 50%,
+            #A0A0A0 100%
+        );
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         text-align: center;
         opacity: 0;
         transform: translateY(20px);
         animation: fadeInUp 0.8s ease forwards;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
     .typing-text {
         display: inline-block;
-        font-size: 32px;
-        line-height: 1.3;
-        font-weight: 600;
+        font-size: 38px;
+        line-height: 1.2;
+        font-weight: 700;
+        position: relative;
     }
 
     .cursor {
         display: inline-block;
-        width: 2px;
-        height: 32px;
-        background: #808080;
+        width: 3px;
+        height: 38px;
+        background: linear-gradient(180deg, #FFFFFF 0%, #A0A0A0 100%);
         margin-left: 4px;
         animation: blink 0.7s infinite;
         position: relative;
         top: 6px;
+        border-radius: 1px;
+        box-shadow: 0 0 8px rgba(160, 160, 160, 0.5);
     }
 
     .typing-role {
         display: block;
-        font-size: 20px;
+        font-size: 22px;
         line-height: 1.4;
-        color: #808080;
-        margin-top: 10px;
+        background: linear-gradient(135deg, 
+            rgba(77, 156, 255, 1) 0%,
+            rgba(77, 156, 255, 0.8) 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-top: 20px;
         opacity: 0;
         transform: translateY(20px);
         animation: fadeInUp 0.8s ease forwards 0.3s;
+        font-weight: 600;
+        letter-spacing: 0.02em;
     }
 
-    /* Hide paragraphs and other elements on mobile */
+    /* Hide other elements */
     .hero-description,
     .cta-buttons,
     .social-links,
@@ -736,28 +793,88 @@ h2::after, .section-heading::after {
     .hero-text p {
         display: none !important;
     }
+
+    /* Add floating particles effect */
+    .particles {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .particle {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        background: rgba(77, 156, 255, 0.15);
+        border-radius: 50%;
+        pointer-events: none;
+    }
+
+    .particle:nth-child(1) { animation: particleFloat 20s infinite; top: 10%; left: 10%; }
+    .particle:nth-child(2) { animation: particleFloat 25s infinite; top: 20%; left: 50%; }
+    .particle:nth-child(3) { animation: particleFloat 30s infinite; top: 60%; left: 80%; }
+    .particle:nth-child(4) { animation: particleFloat 22s infinite; top: 80%; left: 20%; }
 }
 
 @media (max-width: 480px) {
-    .hero {
-        padding: 0 16px;
+    .hero-content {
+        padding: 0 24px;
     }
 
     .main-title {
-        font-size: 28px;
+        font-size: 34px;
     }
 
     .typing-text {
-        font-size: 28px;
+        font-size: 34px;
     }
 
     .cursor {
-        height: 28px;
-        top: 5px;
+        height: 34px;
+        width: 2.5px;
     }
 
     .typing-role {
-        font-size: 18px;
+        font-size: 20px;
+        margin-top: 16px;
+    }
+}
+
+/* New animations */
+@keyframes rotateBackground {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes particleFloat {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(100px, -50px);
+    }
+    50% {
+        transform: translate(0, -100px);
+    }
+    75% {
+        transform: translate(-50px, -25px);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }
 
@@ -773,45 +890,24 @@ h2::after, .section-heading::after {
 }
 
 @keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
+    0%, 100% { 
+        opacity: 1;
+        box-shadow: 0 0 12px rgba(77, 156, 255, 0.5);
+    }
+    50% { 
+        opacity: 0;
+        box-shadow: none;
+    }
 }
 
-/* Add smooth font rendering for mobile */
+/* Enhanced mobile typography */
 @media screen and (-webkit-min-device-pixel-ratio: 2) {
     .main-title,
     .typing-text,
-    .typing-role,
-    .hero-description {
+    .typing-role {
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-    }
-}
-
-/* Add smooth scrolling for iOS */
-@supports (-webkit-overflow-scrolling: touch) {
-    body {
-        -webkit-overflow-scrolling: touch;
-    }
-}
-
-/* Improve touch targets for mobile */
-@media (hover: none) and (pointer: coarse) {
-    .nav-links a,
-    .primary-button,
-    .secondary-button,
-    .social-link {
-        padding: 12px 20px;
-        min-height: 44px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .project-tags span,
-    .skill-card,
-    .contact-method {
-        min-height: 44px;
+        text-rendering: optimizeLegibility;
     }
 }
 
