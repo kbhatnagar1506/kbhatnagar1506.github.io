@@ -626,8 +626,8 @@ h2::after, .section-heading::after {
         min-height: 100vh;
         padding: 0 20px;
         display: flex;
-        align-items: center;
-        justify-content: center;
+        align-items: flex-start;
+        justify-content: flex-start;
         background: var(--background-darker);
     }
 
@@ -636,6 +636,7 @@ h2::after, .section-heading::after {
         width: 100%;
         max-width: 100%;
         text-align: center;
+        margin-top: calc(60px + var(--header-height)); /* Add margin from header */
     }
 
     .main-title {
@@ -681,6 +682,10 @@ h2::after, .section-heading::after {
 @media (max-width: 480px) {
     .hero {
         padding: 0 16px;
+    }
+
+    .hero-content {
+        margin-top: calc(60px + var(--header-height)); /* Maintain the same spacing for smaller phones */
     }
 
     .main-title {
