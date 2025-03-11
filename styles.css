@@ -626,8 +626,8 @@ h2::after, .section-heading::after {
         min-height: 100vh;
         padding: 0 20px;
         display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;
+        align-items: center;
+        justify-content: center;
         background: var(--background-darker);
     }
 
@@ -636,7 +636,11 @@ h2::after, .section-heading::after {
         width: 100%;
         max-width: 100%;
         text-align: center;
-        margin-top: calc(60px + var(--header-height)); /* Add margin from header */
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
     }
 
     .main-title {
@@ -670,8 +674,18 @@ h2::after, .section-heading::after {
         top: 6px;
     }
 
+    .typing-role {
+        display: block;
+        font-size: 20px;
+        line-height: 1.4;
+        color: #808080;
+        margin-top: 10px;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 0.8s ease forwards 0.3s;
+    }
+
     /* Hide other elements on mobile */
-    .typing-role,
     .hero-description,
     .cta-buttons,
     .social-links {
@@ -682,10 +696,6 @@ h2::after, .section-heading::after {
 @media (max-width: 480px) {
     .hero {
         padding: 0 16px;
-    }
-
-    .hero-content {
-        margin-top: calc(60px + var(--header-height)); /* Maintain the same spacing for smaller phones */
     }
 
     .main-title {
@@ -699,6 +709,10 @@ h2::after, .section-heading::after {
     .cursor {
         height: 28px;
         top: 5px;
+    }
+
+    .typing-role {
+        font-size: 18px;
     }
 }
 
