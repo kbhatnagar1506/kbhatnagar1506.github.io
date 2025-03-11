@@ -727,11 +727,14 @@ h2::after, .section-heading::after {
         animation: fadeInUp 0.8s ease forwards 0.3s;
     }
 
-    /* Hide other elements on mobile */
+    /* Hide paragraphs and other elements on mobile */
     .hero-description,
     .cta-buttons,
-    .social-links {
-        display: none;
+    .social-links,
+    .typing-description,
+    .hero p,
+    .hero-text p {
+        display: none !important;
     }
 }
 
