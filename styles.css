@@ -678,7 +678,7 @@ h2::after, .section-heading::after {
         overflow: hidden;
     }
 
-    /* Add subtle animated gradient background */
+    /* Enhanced animated gradient background */
     .hero::before {
         content: '';
         position: absolute;
@@ -688,8 +688,8 @@ h2::after, .section-heading::after {
         bottom: -50%;
         background: radial-gradient(
             circle at center,
-            rgba(77, 156, 255, 0.03) 0%,
-            rgba(77, 156, 255, 0.01) 45%,
+            rgba(77, 156, 255, 0.04) 0%,
+            rgba(77, 156, 255, 0.02) 45%,
             transparent 70%
         );
         animation: rotateBackground 15s linear infinite;
@@ -711,27 +711,27 @@ h2::after, .section-heading::after {
     }
 
     .hero-content {
-        padding: 0 28px;
+        padding: 0 24px;
         width: 100%;
         max-width: 100%;
         text-align: center;
-        margin-top: 0;
+        margin-top: -40px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 28px;
+        gap: 20px;
         position: relative;
         z-index: 2;
         animation: fadeIn 1s ease-out;
     }
 
     .main-title {
-        font-size: 38px;
+        font-size: 32px;
         line-height: 1.2;
         margin-bottom: 0;
         background: linear-gradient(135deg, 
             #FFFFFF 0%,
-            rgba(255, 255, 255, 0.8) 50%,
+            rgba(255, 255, 255, 0.9) 50%,
             #A0A0A0 100%
         );
         -webkit-background-clip: text;
@@ -747,7 +747,7 @@ h2::after, .section-heading::after {
 
     .typing-text {
         display: inline-block;
-        font-size: 38px;
+        font-size: 32px;
         line-height: 1.2;
         font-weight: 700;
         position: relative;
@@ -755,8 +755,8 @@ h2::after, .section-heading::after {
 
     .cursor {
         display: inline-block;
-        width: 3px;
-        height: 38px;
+        width: 2.5px;
+        height: 32px;
         background: linear-gradient(180deg, #FFFFFF 0%, #A0A0A0 100%);
         margin-left: 4px;
         animation: blink 0.7s infinite;
@@ -768,20 +768,45 @@ h2::after, .section-heading::after {
 
     .typing-role {
         display: block;
-        font-size: 22px;
-        line-height: 1.4;
-        background: linear-gradient(135deg, 
-            rgba(77, 156, 255, 1) 0%,
-            rgba(77, 156, 255, 0.8) 100%
-        );
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        margin-top: 20px;
+        font-size: 16px;
+        line-height: 1.5;
+        color: rgba(255, 255, 255, 0.9);
+        margin-top: 16px;
         opacity: 0;
         transform: translateY(20px);
         animation: fadeInUp 0.8s ease forwards 0.3s;
-        font-weight: 600;
+        font-weight: 500;
         letter-spacing: 0.02em;
+        padding: 0 20px;
+        position: relative;
+    }
+
+    .typing-role::after {
+        content: '';
+        position: absolute;
+        bottom: -12px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 40px;
+        height: 2px;
+        background: linear-gradient(90deg,
+            rgba(77, 156, 255, 0) 0%,
+            rgba(77, 156, 255, 0.8) 50%,
+            rgba(77, 156, 255, 0) 100%
+        );
+    }
+
+    .role-description {
+        display: block;
+        font-size: 14px;
+        line-height: 1.6;
+        color: rgba(255, 255, 255, 0.7);
+        margin-top: 24px;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 0.8s ease forwards 0.5s;
+        max-width: 300px;
+        text-align: center;
     }
 
     /* Hide other elements */
@@ -789,12 +814,12 @@ h2::after, .section-heading::after {
     .cta-buttons,
     .social-links,
     .typing-description,
-    .hero p,
+    .hero p:not(.role-description),
     .hero-text p {
         display: none !important;
     }
 
-    /* Add floating particles effect */
+    /* Enhanced floating particles effect */
     .particles {
         position: absolute;
         top: 0;
@@ -803,15 +828,17 @@ h2::after, .section-heading::after {
         height: 100%;
         overflow: hidden;
         z-index: 1;
+        opacity: 0.6;
     }
 
     .particle {
         position: absolute;
-        width: 4px;
-        height: 4px;
-        background: rgba(77, 156, 255, 0.15);
+        width: 3px;
+        height: 3px;
+        background: rgba(77, 156, 255, 0.2);
         border-radius: 50%;
         pointer-events: none;
+        box-shadow: 0 0 10px rgba(77, 156, 255, 0.3);
     }
 
     .particle:nth-child(1) { animation: particleFloat 20s infinite; top: 10%; left: 10%; }
@@ -822,25 +849,59 @@ h2::after, .section-heading::after {
 
 @media (max-width: 480px) {
     .hero-content {
-        padding: 0 24px;
+        padding: 0 20px;
+        margin-top: -30px;
     }
 
     .main-title {
-        font-size: 34px;
+        font-size: 28px;
     }
 
     .typing-text {
-        font-size: 34px;
+        font-size: 28px;
     }
 
     .cursor {
-        height: 34px;
-        width: 2.5px;
+        height: 28px;
     }
 
     .typing-role {
-        font-size: 20px;
-        margin-top: 16px;
+        font-size: 15px;
+        padding: 0 16px;
+        line-height: 1.4;
+    }
+
+    .role-description {
+        font-size: 13px;
+        max-width: 280px;
+        margin-top: 20px;
+    }
+}
+
+/* Enhanced animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes particleFloat {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+    }
+    25% {
+        transform: translate(100px, -50px) scale(1.2);
+    }
+    50% {
+        transform: translate(0, -100px) scale(1);
+    }
+    75% {
+        transform: translate(-50px, -25px) scale(0.8);
     }
 }
 
@@ -851,21 +912,6 @@ h2::after, .section-heading::after {
     }
     to {
         transform: rotate(360deg);
-    }
-}
-
-@keyframes particleFloat {
-    0%, 100% {
-        transform: translate(0, 0);
-    }
-    25% {
-        transform: translate(100px, -50px);
-    }
-    50% {
-        transform: translate(0, -100px);
-    }
-    75% {
-        transform: translate(-50px, -25px);
     }
 }
 
