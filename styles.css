@@ -3384,3 +3384,142 @@ section::before {
         font-size: 0.9rem;
     }
 }
+
+/* About Section Typography Improvements */
+.about-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.about-text {
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--text-primary);
+}
+
+.about-headline {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #64B5F6, #2196F3);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.4;
+}
+
+.about-text .lead {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    color: var(--text-secondary);
+}
+
+.key-projects {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+}
+
+.key-projects h4, .tech-stack h4 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.key-projects ul, .tech-stack ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.key-projects li {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--text-secondary);
+}
+
+.key-projects li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #2196F3;
+}
+
+.key-projects li strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.tech-stack {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+}
+
+.tech-stack p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.closing {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin: 2rem 0 1rem;
+}
+
+.cta {
+    font-size: 1.1rem;
+    color: #2196F3;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-headline {
+        font-size: 1.6rem;
+    }
+
+    .about-text .lead {
+        font-size: 1.15rem;
+    }
+
+    .about-text p, .key-projects li, .tech-stack p {
+        font-size: 1rem;
+    }
+
+    .key-projects, .tech-stack {
+        padding: 1.25rem;
+        margin: 1.5rem 0;
+    }
+
+    .closing {
+        font-size: 1.1rem;
+    }
+}
