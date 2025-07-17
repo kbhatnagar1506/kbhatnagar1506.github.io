@@ -86,39 +86,49 @@
         <section id="about" class="about">
             <div class="section-container">
                 <h2 class="section-title">About Me</h2>
-                <div class="about-content">
-                    <div class="about-grid">
-                        <div class="about-text">
-                            <h3 class="about-headline">💻 Software Engineer | Full-Stack Developer | AI/ML Engineer</h3>
-                            <p class="lead">Hi, I'm Krishna Bhatnagar, a driven software engineer with expertise in building scalable applications, AI systems, and immersive AR experiences.</p>
-                            
-                            <p>Currently studying Computer Science at Georgia State University, I specialize in developing high-performance applications that combine modern architectures, efficient algorithms, and cutting-edge technologies.</p>
-                            
-                            <p>🧠 My core focus lies in crafting clean, efficient code and building systems that scale—whether it's AI-powered applications, real-time AR experiences, or full-stack solutions.</p>
-
-                            <div class="key-projects">
-                                <h4>🚀 Key Projects:</h4>
-                                <ul>
-                                    <li><strong>MetabolX:</strong> A high-performance AI platform processing real-time data with 97.2% accuracy. Built with Flask, TensorFlow, Docker, and scikit-learn, featuring advanced data processing pipelines and API integrations.</li>
-                                    <li><strong>NutriLens AR:</strong> An innovative AR application leveraging Snap Spectacles SDK, featuring real-time computer vision, WebSocket streaming, and cloud integration using GPT-4, MongoDB Atlas, and custom APIs.</li>
-                                    <li><strong>Aarolic:</strong> A full-stack iOS application built with SwiftUI, featuring real-time data processing, secure API integrations, and scalable cloud architecture using AWS and microservices.</li>
-                                </ul>
-                            </div>
-
-                            <div class="tech-stack">
-                                <h4>🧰 Technical Stack:</h4>
-                                <p>Python • JavaScript/TypeScript • Swift • Node.js • Flask • MongoDB • RESTful APIs • Docker • AWS • TensorFlow • WebSockets • SwiftUI • Git/GitHub • CI/CD • System Design</p>
-                            </div>
-
-                            <p>🌱 I bring strong expertise in software architecture, system design, and full-stack development. With a solid foundation in data structures, algorithms, and modern development practices, I'm ready to tackle complex technical challenges and build robust, scalable solutions.</p>
-
-                            <p class="closing">Let's push the boundaries of what's possible with code.</p>
-                            <p class="cta">📩 Open to software engineering roles and technical collaborations.</p>
+                <div class="story-container">
+                    <!-- Story Chapter 1 -->
+                    <div class="story-chapter" data-chapter="1">
+                        <div class="story-content">
+                            <h3 class="story-headline">i believe some of us are here to build.</h3>
+                            <p class="story-text">not just to write code, but to <strong>craft solutions</strong> that leave a mark.</p>
+                            <p class="story-text">for me, the ultimate measure of a product isn't its <em>complexity</em>, but its <strong>impact</strong>. my entire focus is on building technology that solves real problems—making <em>healthcare more personal</em>, <strong>finance more accessible</strong>, and <em>complex data more human</em>.</p>
                         </div>
-                        <div class="about-image">
-                            <div class="image-wrapper">
-                                <img src="assets/profile.png" alt="Krishna Bhatnagar" class="profile-image">
-                            </div>
+                    </div>
+
+                    <!-- Story Chapter 2 -->
+                    <div class="story-chapter" data-chapter="2">
+                        <div class="story-content">
+                            <h3 class="story-headline">i don't just build apps. i build systems with purpose.</h3>
+                            <p class="story-text">my craft: where <strong>iOS meets intelligence</strong>.</p>
+                            <p class="story-text">i've chosen my craft carefully. i build on <em>iOS</em>, creating seamless, human-first experiences with <strong>SwiftUI</strong>. this is my canvas, where the user's journey begins with <em>intuition</em> and <strong>elegance</strong>.</p>
+                        </div>
+                    </div>
+
+                    <!-- Story Chapter 3 -->
+                    <div class="story-chapter" data-chapter="3">
+                        <div class="story-content">
+                            <h3 class="story-headline">but the real magic happens</h3>
+                            <p class="story-text">when i infuse these applications with the power of <strong>machine learning</strong>. i don't just create interfaces; i engineer <em>intelligent systems</em> that learn, predict, and assist.</p>
+                            <p class="story-text">my work lives at the intersection of <strong>beautiful design</strong> and <em>powerful AI</em>.</p>
+                        </div>
+                    </div>
+
+                    <!-- Story Chapter 6 -->
+                    <div class="story-chapter" data-chapter="6">
+                        <div class="story-content">
+                            <h3 class="story-headline">i'm not looking for just another role.</h3>
+                            <p class="story-text">i'm looking for a <strong>mission</strong>.</p>
+                            <p class="story-text">a place where my skills in <em>iOS and machine learning</em> can contribute to building something that truly <strong>matters</strong>.</p>
+                        </div>
+                    </div>
+
+                    <!-- Story Chapter 7 -->
+                    <div class="story-chapter" data-chapter="7">
+                        <div class="story-content">
+                            <h3 class="story-headline">let's build the future</h3>
+                            <p class="story-text">one <strong>impactful application</strong> at a time.</p>
+                            <p class="story-text cta">📩 <strong>Ready to contribute to building something that truly matters.</strong></p>
                         </div>
                     </div>
                 </div>
@@ -896,6 +906,53 @@
                 </button>
             `;
         }
+
+        // Story Chapter Scroll Animation - CRED-like storytelling
+        const storyChapters = document.querySelectorAll('.story-chapter');
+        
+        const storyObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.3,
+            rootMargin: '0px 0px -100px 0px'
+        });
+
+        storyChapters.forEach(chapter => {
+            storyObserver.observe(chapter);
+        });
+
+        // Enhanced scroll experience for story chapters
+        let isScrolling = false;
+        
+        window.addEventListener('scroll', () => {
+            if (!isScrolling) {
+                window.requestAnimationFrame(() => {
+                    const scrolled = window.pageYOffset;
+                    const rate = scrolled * -0.5;
+                    
+                    storyChapters.forEach((chapter, index) => {
+                        const rect = chapter.getBoundingClientRect();
+                        const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+                        
+                        if (isVisible) {
+                            const progress = (window.innerHeight - rect.top) / (window.innerHeight + rect.height);
+                            const clampedProgress = Math.max(0, Math.min(1, progress));
+                            
+                            // Parallax effect for story chapters
+                            const yPos = (1 - clampedProgress) * 50;
+                            chapter.style.transform = `translateY(${yPos}px)`;
+                        }
+                    });
+                    
+                    isScrolling = false;
+                });
+            }
+            isScrolling = true;
+        });
     </script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
