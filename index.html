@@ -53,11 +53,6 @@
 <body>
     <header class="header">
         <nav class="nav">
-            <button class="menu-toggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -67,6 +62,11 @@
                 <li><a href="#certificates">Certificates</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </nav>
     </header>
 
@@ -77,8 +77,15 @@
                 <div class="particles" id="particles-js"></div>
             </div>
             <div class="hero-content">
-                <div class="hero-logo-fullscreen">
-                    <img src="assets/logo.png" alt="Krishna Bhatnagar - Software Developer" class="fullscreen-logo">
+                <div class="hero-text">
+                    <h1 class="main-title">
+                        <span class="typing-text"></span>
+                        <span class="cursor">|</span>
+                    </h1>
+                    <div class="roles">
+                        <p class="role typing-role"></p>
+                    </div>
+                    <p class="hero-description typing-description"></p>
                 </div>
             </div>
         </section>
@@ -86,49 +93,39 @@
         <section id="about" class="about">
             <div class="section-container">
                 <h2 class="section-title">About Me</h2>
-                <div class="story-container">
-                    <!-- Story Chapter 1 -->
-                    <div class="story-chapter" data-chapter="1">
-                        <div class="story-content">
-                            <h3 class="story-headline">i believe some of us are here to build.</h3>
-                            <p class="story-text">not just to write code, but to <strong>craft solutions</strong> that leave a mark.</p>
-                            <p class="story-text">for me, the ultimate measure of a product isn't its <em>complexity</em>, but its <strong>impact</strong>. my entire focus is on building technology that solves real problems—making <em>healthcare more personal</em>, <strong>finance more accessible</strong>, and <em>complex data more human</em>.</p>
-                        </div>
-                    </div>
+                <div class="about-content">
+                    <div class="about-grid">
+                        <div class="about-text">
+                            <h3 class="about-headline">💻 Software Engineer | Full-Stack Developer | AI/ML Engineer</h3>
+                            <p class="lead">Hi, I'm Krishna Bhatnagar, a driven software engineer with expertise in building scalable applications, AI systems, and immersive AR experiences.</p>
+                            
+                            <p>Currently studying Computer Science at Georgia State University, I specialize in developing high-performance applications that combine modern architectures, efficient algorithms, and cutting-edge technologies.</p>
+                            
+                            <p>🧠 My core focus lies in crafting clean, efficient code and building systems that scale—whether it's AI-powered applications, real-time AR experiences, or full-stack solutions.</p>
 
-                    <!-- Story Chapter 2 -->
-                    <div class="story-chapter" data-chapter="2">
-                        <div class="story-content">
-                            <h3 class="story-headline">i don't just build apps. i build systems with purpose.</h3>
-                            <p class="story-text">my craft: where <strong>iOS meets intelligence</strong>.</p>
-                            <p class="story-text">i've chosen my craft carefully. i build on <em>iOS</em>, creating seamless, human-first experiences with <strong>SwiftUI</strong>. this is my canvas, where the user's journey begins with <em>intuition</em> and <strong>elegance</strong>.</p>
-                        </div>
-                    </div>
+                            <div class="key-projects">
+                                <h4>🚀 Key Projects:</h4>
+                                <ul>
+                                    <li><strong>MetabolX:</strong> A high-performance AI platform processing real-time data with 97.2% accuracy. Built with Flask, TensorFlow, Docker, and scikit-learn, featuring advanced data processing pipelines and API integrations.</li>
+                                    <li><strong>NutriLens AR:</strong> An innovative AR application leveraging Snap Spectacles SDK, featuring real-time computer vision, WebSocket streaming, and cloud integration using GPT-4, MongoDB Atlas, and custom APIs.</li>
+                                    <li><strong>Aarolic:</strong> A full-stack iOS application built with SwiftUI, featuring real-time data processing, secure API integrations, and scalable cloud architecture using AWS and microservices.</li>
+                                </ul>
+                            </div>
 
-                    <!-- Story Chapter 3 -->
-                    <div class="story-chapter" data-chapter="3">
-                        <div class="story-content">
-                            <h3 class="story-headline">but the real magic happens</h3>
-                            <p class="story-text">when i infuse these applications with the power of <strong>machine learning</strong>. i don't just create interfaces; i engineer <em>intelligent systems</em> that learn, predict, and assist.</p>
-                            <p class="story-text">my work lives at the intersection of <strong>beautiful design</strong> and <em>powerful AI</em>.</p>
-                        </div>
-                    </div>
+                            <div class="tech-stack">
+                                <h4>🧰 Technical Stack:</h4>
+                                <p>Python • JavaScript/TypeScript • Swift • Node.js • Flask • MongoDB • RESTful APIs • Docker • AWS • TensorFlow • WebSockets • SwiftUI • Git/GitHub • CI/CD • System Design</p>
+                            </div>
 
-                    <!-- Story Chapter 6 -->
-                    <div class="story-chapter" data-chapter="6">
-                        <div class="story-content">
-                            <h3 class="story-headline">i'm not looking for just another role.</h3>
-                            <p class="story-text">i'm looking for a <strong>mission</strong>.</p>
-                            <p class="story-text">a place where my skills in <em>iOS and machine learning</em> can contribute to building something that truly <strong>matters</strong>.</p>
-                        </div>
-                    </div>
+                            <p>🌱 I bring strong expertise in software architecture, system design, and full-stack development. With a solid foundation in data structures, algorithms, and modern development practices, I'm ready to tackle complex technical challenges and build robust, scalable solutions.</p>
 
-                    <!-- Story Chapter 7 -->
-                    <div class="story-chapter" data-chapter="7">
-                        <div class="story-content">
-                            <h3 class="story-headline">let's build the future</h3>
-                            <p class="story-text">one <strong>impactful application</strong> at a time.</p>
-                            <p class="story-text cta">📩 <strong>Ready to contribute to building something that truly matters.</strong></p>
+                            <p class="closing">Let's push the boundaries of what's possible with code.</p>
+                            <p class="cta">📩 Open to software engineering roles and technical collaborations.</p>
+                        </div>
+                        <div class="about-image">
+                            <div class="image-wrapper">
+                                <img src="assets/profile.png" alt="Krishna Bhatnagar" class="profile-image">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -309,79 +306,40 @@
             <div class="experience-content">
                 <h2>Work Experience</h2>
                 <div class="experience-timeline">
-                    <!-- Current iOS App Developer Role at VFC -->
+                    <!-- Current Job at VFC -->
                     <div class="experience-card">
                         <div class="experience-header">
-                            <span class="experience-date">May 2025 - Present • 3 mos</span>
-                            <h3>iOS App Developer</h3>
+                            <span class="experience-date">Feb 2024 - Present</span>
+                            <h3>Software Developer</h3>
                             <div class="company-info">
-                                <span class="company-name">Victory Financial Consulting Private Limited</span>
-                                <span class="company-location">Gurugram, Haryana, India • On-site</span>
-                            </div>
-                        </div>
-                        <div class="experience-details">
-                            <div class="company-description">
-                                <p>At Victory Financial Consulting, we revolutionize home financing through innovative technology solutions, delivering seamless loan processing with cutting-edge mobile applications.</p>
-                            </div>
-                            <div class="key-achievements">
-                                <h4>Key Achievements</h4>
-                                <ul>
-                                    <li>Architected comprehensive loan application platform using SwiftUI, delivering end-to-end home loan processing with 4-step intelligent workflow and real-time application tracking</li>
-                                    <li>Developed advanced EMI calculator with reducing balance methodology, interactive sliders, and dynamic financial projections to enhance user decision-making experience</li>
-                                    <li>Implemented secure authentication system integrating MSG91 OTP service with robust error handling, secure proxy architecture, and seamless mobile verification workflow</li>
-                                    <li>Built dynamic partner bank integration featuring auto-scrolling carousel showcasing 6+ major Indian banks (SBI, HDFC, ICICI, Axis) with smooth animations</li>
-                                    <li>Created intelligent document management system with employment-type specific validation, multi-format file upload support, and secure cloud storage integration</li>
-                                    <li>Engineered responsive UI/UX design with professional golden theme, accessibility compliance, and optimized user flows targeting tech-savvy homebuyers</li>
-                                    <li>Integrated RESTful API architecture connecting iOS app to Node.js/PostgreSQL backend with comprehensive error handling and secure HTTPS communication</li>
-                                    <li>Achieved complete App Store compliance including privacy policy development, security certifications, and delivered production-ready application with iOS 15.0+ compatibility</li>
-                                </ul>
-                            </div>
-                            <div class="tech-stack">
-                                <span>SwiftUI</span>
-                                <span>iOS</span>
-                                <span>Xcode</span>
-                                <span>Node.js</span>
-                                <span>PostgreSQL</span>
-                                <span>RESTful APIs</span>
-                                <span>MSG91</span>
-                                <span>Heroku</span>
-                            </div>
-                            <a href="https://vfcloans.in/" target="_blank" rel="noopener noreferrer" class="company-link">
-                                Visit Company Website <span class="arrow">→</span>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Junior Software Engineer Role at VFC -->
-                    <div class="experience-card">
-                        <div class="experience-header">
-                            <span class="experience-date">Nov 2024 - Apr 2025 • 6 mos</span>
-                            <h3>Junior Software Engineer</h3>
-                            <div class="company-info">
-                                <span class="company-name">Victory Financial Consulting Private Limited</span>
+                                <span class="company-name">Victory Financial Consulting (VFC)</span>
                                 <span class="company-location">Gurugram, Haryana, India • Remote</span>
                             </div>
                         </div>
                         <div class="experience-details">
+                            <div class="company-description">
+                                <p>At Victory Financial Consulting (VFC), we simplify home financing by offering seamless loan solutions with minimal paperwork, quick approvals, and competitive interest rates.</p>
+                            </div>
                             <div class="key-achievements">
                                 <h4>Key Achievements</h4>
                                 <ul>
-                                    <li>Developed company iOS app for seamless user experience with comprehensive loan application features</li>
-                                    <li>Built intelligent chatbot for real-time loan queries, improving customer support efficiency by 40%</li>
-                                    <li>Implemented AI-driven response system for automated customer interactions and query resolution</li>
-                                    <li>Created end-to-end loan application process with streamlined workflow and user-friendly interface</li>
-                                    <li>Enhanced company's social media presence and organized comprehensive online workflow management</li>
-                                    <li>Managed complete production lifecycle of iOS app launch including version updates and deployment strategies</li>
+                                    <li>Developing the company website to provide a seamless user experience</li>
+                                    <li>Building a chatbot to assist customers with real-time loan queries</li>
+                                    <li>Implementing an AI-driven response system to streamline customer interactions</li>
+                                    <li>Contributing to improving customer engagement and automation</li>
                                 </ul>
                             </div>
                             <div class="tech-stack">
-                                <span>Full-Stack Development</span>
-                                <span>Artificial Intelligence</span>
-                                <span>iOS Development</span>
-                                <span>Chatbot Development</span>
-                                <span>Social Media Management</span>
-                                <span>Production Management</span>
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>React</span>
+                                <span>Node.js</span>
+                                <span>AI/ML</span>
                             </div>
+                            <a href="https://vfcloans.in/" target="_blank" rel="noopener noreferrer" class="company-link">
+                                Visit Company Website <span class="arrow">→</span>
+                            </a>
                         </div>
                     </div>
 
@@ -654,22 +612,6 @@
                 <div class="certificates-grid">
                     <article class="certificate-card">
                         <div class="certificate-content">
-                            <div class="certificate-icon">🧠</div>
-                            <h3>Supervised Machine Learning: Regression and Classification</h3>
-                            <p class="certificate-issuer">Stanford University & DeepLearning.AI</p>
-                            <p class="certificate-date">2025</p>
-                            <ul class="certificate-details">
-                                <li>Linear & Logistic Regression</li>
-                                <li>Gradient Descent Optimization</li>
-                                <li>Regularization Techniques</li>
-                                <li>Classification Algorithms</li>
-                            </ul>
-                            <a href="https://coursera.org/share/a178c3ebf18f7a388d51ad00223d7db9" target="_blank" class="certificate-link">View Certificate →</a>
-                        </div>
-                    </article>
-
-                    <article class="certificate-card">
-                        <div class="certificate-content">
                             <div class="certificate-icon">🤖</div>
                             <h3>Android Development & DSA</h3>
                             <p class="certificate-issuer">Ducat Education</p>
@@ -795,7 +737,40 @@
         </div>
     </footer>
     <script>
-        // Logo-focused hero section - no typing animation needed
+        const mainTitle = "Hi! I'm Krishna Bhatnagar";
+        const roleText = "Software Engineer | Full-Stack Developer | AI/ML Engineer";
+        const descriptionText = `Building scalable applications and innovative solutions using cutting-edge technologies. Currently pursuing Computer Science at Georgia State University, specializing in AI/ML systems and full-stack development.
+
+        With expertise in system architecture, AI integration, and modern tech stacks, I transform complex requirements into efficient, production-ready solutions. From real-time AR applications to high-performance AI systems, I focus on writing clean, maintainable code that scales.
+
+        Let's build something extraordinary that pushes technological boundaries!`;
+
+        function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+
+        async function animateText() {
+            const titleElement = document.querySelector('.typing-text');
+            const roleElement = document.querySelector('.typing-role');
+            const descriptionElement = document.querySelector('.typing-description');
+            
+            titleElement.textContent = mainTitle;
+            roleElement.textContent = roleText;
+            descriptionElement.innerHTML = descriptionText.split('\n\n').map(para => `<p>${para.trim()}</p>`).join('');
+            
+            await sleep(200);
+            titleElement.classList.add('visible');
+            await sleep(400);
+            roleElement.classList.add('visible');
+            await sleep(400);
+            descriptionElement.classList.add('visible');
+        }
+
+        // Remove cursor element from HTML
+        document.querySelector('.cursor')?.remove();
+
+        // Start animation when page loads
+        animateText();
 
         const observeSkills = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -814,27 +789,9 @@
         const menuToggle = document.querySelector('.menu-toggle');
         const navLinks = document.querySelector('.nav-links');
         
-        function toggleMenu() {
+        menuToggle?.addEventListener('click', () => {
             navLinks.classList.toggle('active');
             menuToggle.classList.toggle('active');
-        }
-        
-        menuToggle?.addEventListener('click', toggleMenu);
-        
-        // Close menu when clicking on nav links
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-                menuToggle.classList.remove('active');
-            });
-        });
-        
-        // Close menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!menuToggle.contains(e.target) && !navLinks.contains(e.target)) {
-                navLinks.classList.remove('active');
-                menuToggle.classList.remove('active');
-            }
         });
 
         const header = document.querySelector('.header');
@@ -906,53 +863,6 @@
                 </button>
             `;
         }
-
-        // Story Chapter Scroll Animation - CRED-like storytelling
-        const storyChapters = document.querySelectorAll('.story-chapter');
-        
-        const storyObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, {
-            threshold: 0.3,
-            rootMargin: '0px 0px -100px 0px'
-        });
-
-        storyChapters.forEach(chapter => {
-            storyObserver.observe(chapter);
-        });
-
-        // Enhanced scroll experience for story chapters
-        let isScrolling = false;
-        
-        window.addEventListener('scroll', () => {
-            if (!isScrolling) {
-                window.requestAnimationFrame(() => {
-                    const scrolled = window.pageYOffset;
-                    const rate = scrolled * -0.5;
-                    
-                    storyChapters.forEach((chapter, index) => {
-                        const rect = chapter.getBoundingClientRect();
-                        const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
-                        
-                        if (isVisible) {
-                            const progress = (window.innerHeight - rect.top) / (window.innerHeight + rect.height);
-                            const clampedProgress = Math.max(0, Math.min(1, progress));
-                            
-                            // Parallax effect for story chapters
-                            const yPos = (1 - clampedProgress) * 50;
-                            chapter.style.transform = `translateY(${yPos}px)`;
-                        }
-                    });
-                    
-                    isScrolling = false;
-                });
-            }
-            isScrolling = true;
-        });
     </script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
