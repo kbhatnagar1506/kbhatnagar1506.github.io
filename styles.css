@@ -6,9 +6,9 @@
     --text-primary: #FFFFFF;
     --text-secondary: #CCCCCC;
     --text-tertiary: #999999;
-    --primary-color: #007bff;
-    --primary-color-dark: #1F6FEB;
-    --gradient-primary: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+    --primary-color: #4da6ff;
+    --primary-color-dark: #66b3ff;
+    --gradient-primary: linear-gradient(135deg, #5b9eff 0%, #4da6ff 100%);
     --gradient-secondary: linear-gradient(135deg, #CCCCCC 0%, #999999 100%);
     
     /* Spacing */
@@ -92,7 +92,7 @@ h2::after, .section-heading::after {
     display: block;
     width: 60px;
     height: 4px;
-    background: linear-gradient(90deg, #1d4ed8, #1e40af);
+    background: linear-gradient(90deg, #5b9eff, #4da6ff);
     margin: 1rem auto;
     border-radius: 2px;
 }
@@ -163,7 +163,7 @@ h2::after, .section-heading::after {
 
 .nav-links a:hover {
     color: var(--text-primary);
-    background: rgba(77, 156, 255, 0.1);
+    background: rgba(91, 158, 255, 0.1);
 }
 
 .nav-links a::after {
@@ -462,7 +462,7 @@ h2::after, .section-heading::after {
     font-weight: 700;
     margin-bottom: 1.5rem;
     color: #fff;
-    text-shadow: 0 0 30px rgba(0,123,255,0.3);
+    text-shadow: 0 0 30px rgba(77,166,255,0.3);
     display: inline-block;
 }
 
@@ -472,7 +472,7 @@ h2::after, .section-heading::after {
     white-space: nowrap;
     border-right: none;
     font-weight: 700;
-    background: linear-gradient(120deg, #007bff, #00ff95);
+    background: linear-gradient(120deg, #4da6ff, #00ff95);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: gradient 8s ease infinite;
@@ -483,7 +483,7 @@ h2::after, .section-heading::after {
     display: inline-block;
     width: 3px;
     height: 1em;
-    background: #007bff;
+    background: #4da6ff;
     margin-left: 2px;
     animation: blink 0.7s infinite;
     position: relative;
@@ -496,7 +496,7 @@ h2::after, .section-heading::after {
     color: rgba(255, 255, 255, 0.9);
     margin: 1rem 0;
     min-height: 2.5rem;
-    text-shadow: 0 0 10px rgba(0,123,255,0.3);
+    text-shadow: 0 0 10px rgba(77,166,255,0.3);
 }
 
 .typing-description {
@@ -532,7 +532,7 @@ h2::after, .section-heading::after {
     font-size: 4.5rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
-    text-shadow: 0 0 30px rgba(0,123,255,0.3);
+    text-shadow: 0 0 30px rgba(77,166,255,0.3);
     display: inline-block;
     position: relative;
 }
@@ -651,7 +651,7 @@ h2::after, .section-heading::after {
 }
 
 .primary-button {
-    background: linear-gradient(135deg, #2962ff 0%, #3311ff 100%);
+    background: linear-gradient(135deg, #5b9eff 0%, #4da6ff 100%);
     color: #fff;
     border: none;
 }
@@ -673,7 +673,7 @@ h2::after, .section-heading::after {
 
 .primary-button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(41, 98, 255, 0.3);
+    box-shadow: 0 8px 20px rgba(91, 158, 255, 0.3);
 }
 
 .secondary-button:hover {
@@ -1171,15 +1171,15 @@ h2::after, .section-heading::after {
     align-items: center;
     gap: 1rem;
     padding: 1.2rem;
-    background: rgba(77, 156, 255, 0.1);
-    border: 1px solid rgba(77, 156, 255, 0.2);
+    background: rgba(91, 158, 255, 0.1);
+    border: 1px solid rgba(91, 158, 255, 0.2);
     border-radius: 12px;
     transition: all 0.3s ease;
 }
 
 .highlight-item:hover {
-    background: rgba(77, 156, 255, 0.15);
-    border-color: rgba(77, 156, 255, 0.3);
+    background: rgba(91, 158, 255, 0.15);
+    border-color: rgba(91, 158, 255, 0.3);
     transform: translateY(-2px);
 }
 
@@ -1218,24 +1218,24 @@ h2::after, .section-heading::after {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+    background: linear-gradient(135deg, #5b9eff 0%, #4da6ff 100%);
     color: white;
-    box-shadow: 0 4px 15px rgba(29, 78, 216, 0.3);
+    box-shadow: 0 4px 15px rgba(91, 158, 255, 0.3);
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(29, 78, 216, 0.4);
+    box-shadow: 0 8px 25px rgba(91, 158, 255, 0.4);
 }
 
 .btn-secondary {
     background: transparent;
-    color: #1d4ed8;
-    border: 2px solid #1d4ed8;
+    color: #5b9eff;
+    border: 2px solid #5b9eff;
 }
 
 .btn-secondary:hover {
-    background: rgba(29, 78, 216, 0.1);
+    background: rgba(91, 158, 255, 0.1);
     transform: translateY(-2px);
 }
 
@@ -1254,7 +1254,7 @@ h2::after, .section-heading::after {
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at 30% 70%, rgba(77, 156, 255, 0.05) 0%, transparent 50%),
+    background: radial-gradient(circle at 30% 70%, rgba(91, 158, 255, 0.05) 0%, transparent 50%),
                 radial-gradient(circle at 70% 30%, rgba(255, 107, 107, 0.05) 0%, transparent 50%);
     pointer-events: none;
 }
@@ -1300,7 +1300,7 @@ h2::after, .section-heading::after {
     background: rgba(20, 22, 30, 0.95);
     border-radius: 15px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(77, 156, 255, 0.1);
+    border: 1px solid rgba(91, 158, 255, 0.1);
     padding: 2rem;
     transition: all 0.3s ease;
     position: relative;
@@ -1322,7 +1322,7 @@ h2::after, .section-heading::after {
 .skill-category:hover {
     transform: translateY(-8px);
     box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
-    border-color: rgba(77, 156, 255, 0.2);
+    border-color: rgba(91, 158, 255, 0.2);
 }
 
 .skill-category:hover::before {
@@ -1335,20 +1335,20 @@ h2::after, .section-heading::after {
     gap: 1rem;
     margin-bottom: 2rem;
     padding-bottom: 1.5rem;
-    border-bottom: 1px solid rgba(77, 156, 255, 0.1);
+    border-bottom: 1px solid rgba(91, 158, 255, 0.1);
 }
 
 .skill-icon {
     width: 50px;
     height: 50px;
-    background: linear-gradient(135deg, #4d9cff 0%, #3a7bd5 100%);
+    background: linear-gradient(135deg, #5b9eff 0%, #4da6ff 100%);
     border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
     font-size: 1.2rem;
-    box-shadow: 0 4px 15px rgba(77, 156, 255, 0.3);
+    box-shadow: 0 4px 15px rgba(91, 158, 255, 0.3);
     position: relative;
     overflow: hidden;
 }
@@ -4130,84 +4130,39 @@ section::before {
 
 .resume-embed {
   width: 100%;
-  max-width: 800px;
+  max-width: 100%;
   background: transparent;
   border-radius: 0;
   overflow: visible;
   box-shadow: none;
+  margin: 2rem 0;
 }
 
 .resume-embed iframe {
   width: 100%;
-  height: 100%;
+  height: 800px;
   border: none;
-  border-radius: 0;
+  border-radius: 8px;
   display: block;
+  background: white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* iPad Frame Styles */
+/* Full View Resume Display */
 .ipad-frame {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 3rem auto;
-  max-width: 800px;
-  padding: 2rem;
+  display: none;
 }
 
 .ipad-screen {
-  position: relative;
-  width: 100%;
-  max-width: 600px;
-  height: 800px;
-  background: #000;
-  border-radius: 20px;
-  padding: 20px;
-  box-shadow: 
-    0 30px 60px rgba(29, 78, 216, 0.4),
-    0 15px 30px rgba(29, 78, 216, 0.3),
-    0 5px 15px rgba(29, 78, 216, 0.2);
-  transform: perspective(1000px) rotateX(5deg);
-  transition: transform 0.3s ease;
-}
-
-.ipad-screen:hover {
-  transform: perspective(1000px) rotateX(0deg) scale(1.02);
-  box-shadow: 
-    0 35px 70px rgba(29, 78, 216, 0.5),
-    0 20px 40px rgba(29, 78, 216, 0.4),
-    0 10px 20px rgba(29, 78, 216, 0.3);
+  display: none;
 }
 
 .ipad-notch {
-  position: absolute;
-  top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 6px;
-  background: #333;
-  border-radius: 3px;
-  z-index: 10;
+  display: none;
 }
 
 .ipad-camera {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 4px;
-  height: 4px;
-  background: #666;
-  border-radius: 50%;
-}
-
-.ipad-screen iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-  border-radius: 12px;
-  background: white;
+  display: none;
 }
 
 /* Responsive Design */
@@ -4257,16 +4212,7 @@ section::before {
   }
   
   .resume-embed iframe {
-    height: 100%;
-  }
-  
-  .ipad-screen {
     height: 600px;
-    max-width: 400px;
-  }
-  
-  .ipad-frame {
-    margin: 1rem auto;
   }
   
   .resume-actions {
@@ -5211,8 +5157,8 @@ section::before {
         padding: 40px 0;
     }
     
-    .resume-embed {
-        height: 350px;
+    .resume-embed iframe {
+        height: 500px;
     }
     
     /* Experience Section Extra Small */
