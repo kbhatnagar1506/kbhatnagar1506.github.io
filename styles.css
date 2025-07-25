@@ -8,7 +8,7 @@
     --text-tertiary: #999999;
     --primary-color: #007bff;
     --primary-color-dark: #1F6FEB;
-    --gradient-primary: linear-gradient(135deg, #4D9CFF 0%, #1F6FEB 100%);
+    --gradient-primary: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
     --gradient-secondary: linear-gradient(135deg, #CCCCCC 0%, #999999 100%);
     
     /* Spacing */
@@ -92,7 +92,7 @@ h2::after, .section-heading::after {
     display: block;
     width: 60px;
     height: 4px;
-    background: linear-gradient(90deg, var(--accent-color), var(--accent-color-light));
+    background: linear-gradient(90deg, #1d4ed8, #1e40af);
     margin: 1rem auto;
     border-radius: 2px;
 }
@@ -366,11 +366,11 @@ h2::after, .section-heading::after {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: calc(var(--spacing-unit) * 3);
+        gap: calc(var(--spacing-unit) * 2);
         transition: all var(--transition-speed);
         border-radius: 0;
         border: none;
-        padding: var(--spacing-unit);
+        padding: calc(var(--spacing-unit) * 0.5);
         margin: 0;
     }
 
@@ -1122,12 +1122,19 @@ h2::after, .section-heading::after {
 .about-header h3 {
     font-size: 2.5rem;
     font-weight: 700;
-    background: linear-gradient(135deg, #4d9cff 0%, #ff6b6b 100%);
+    background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     margin-bottom: 1rem;
     line-height: 1.2;
+}
+
+.blue-title {
+    background: linear-gradient(135deg, #1d4ed8, #1e40af) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
 }
 
 .about-subtitle {
@@ -1211,24 +1218,24 @@ h2::after, .section-heading::after {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, #4d9cff 0%, #3a7bd5 100%);
+    background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
     color: white;
-    box-shadow: 0 4px 15px rgba(77, 156, 255, 0.3);
+    box-shadow: 0 4px 15px rgba(29, 78, 216, 0.3);
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(77, 156, 255, 0.4);
+    box-shadow: 0 8px 25px rgba(29, 78, 216, 0.4);
 }
 
 .btn-secondary {
     background: transparent;
-    color: #4d9cff;
-    border: 2px solid #4d9cff;
+    color: #1d4ed8;
+    border: 2px solid #1d4ed8;
 }
 
 .btn-secondary:hover {
-    background: rgba(77, 156, 255, 0.1);
+    background: rgba(29, 78, 216, 0.1);
     transform: translateY(-2px);
 }
 
@@ -4050,25 +4057,25 @@ section::before {
 }
 
 .resume-actions .btn-primary {
-  background: linear-gradient(135deg, #00d4ff, #0099cc);
+  background: linear-gradient(135deg, #1d4ed8, #1e40af);
   color: #ffffff;
-  box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
+  box-shadow: 0 4px 15px rgba(29, 78, 216, 0.3);
 }
 
 .resume-actions .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 212, 255, 0.4);
+  box-shadow: 0 6px 20px rgba(29, 78, 216, 0.4);
 }
 
 .resume-actions .btn-secondary {
-  background: rgba(255, 255, 255, 0.1);
-  color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+  color: #1d4ed8;
+  border: 2px solid #1d4ed8;
 }
 
 .resume-actions .btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.15);
-  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(29, 78, 216, 0.1);
+  border-color: #1d4ed8;
   transform: translateY(-2px);
 }
 
@@ -4124,17 +4131,83 @@ section::before {
 .resume-embed {
   width: 100%;
   max-width: 800px;
-  background: #ffffff;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  background: transparent;
+  border-radius: 0;
+  overflow: visible;
+  box-shadow: none;
 }
 
 .resume-embed iframe {
   width: 100%;
-  height: 600px;
+  height: 100%;
   border: none;
+  border-radius: 0;
   display: block;
+}
+
+/* iPad Frame Styles */
+.ipad-frame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem auto;
+  max-width: 800px;
+  padding: 2rem;
+}
+
+.ipad-screen {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  height: 800px;
+  background: #000;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 
+    0 30px 60px rgba(29, 78, 216, 0.4),
+    0 15px 30px rgba(29, 78, 216, 0.3),
+    0 5px 15px rgba(29, 78, 216, 0.2);
+  transform: perspective(1000px) rotateX(5deg);
+  transition: transform 0.3s ease;
+}
+
+.ipad-screen:hover {
+  transform: perspective(1000px) rotateX(0deg) scale(1.02);
+  box-shadow: 
+    0 35px 70px rgba(29, 78, 216, 0.5),
+    0 20px 40px rgba(29, 78, 216, 0.4),
+    0 10px 20px rgba(29, 78, 216, 0.3);
+}
+
+.ipad-notch {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 6px;
+  background: #333;
+  border-radius: 3px;
+  z-index: 10;
+}
+
+.ipad-camera {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 4px;
+  height: 4px;
+  background: #666;
+  border-radius: 50%;
+}
+
+.ipad-screen iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 12px;
+  background: white;
 }
 
 /* Responsive Design */
@@ -4184,7 +4257,16 @@ section::before {
   }
   
   .resume-embed iframe {
-    height: 400px;
+    height: 100%;
+  }
+  
+  .ipad-screen {
+    height: 600px;
+    max-width: 400px;
+  }
+  
+  .ipad-frame {
+    margin: 1rem auto;
   }
   
   .resume-actions {
@@ -5449,5 +5531,675 @@ section::before {
     
     .highlight-card i {
         font-size: 1.5rem;
+    }
+}
+
+/* Demo Video Section */
+.demo-video {
+    padding: var(--section-spacing) 0;
+    background: linear-gradient(135deg, var(--background-dark) 0%, var(--background-darker) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.demo-video::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 30% 20%, rgba(79, 156, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 70% 80%, rgba(31, 111, 235, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.demo-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.demo-description h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.demo-description p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+
+.demo-features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all var(--transition-speed) ease;
+}
+
+.feature-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+.feature-item i {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    width: 24px;
+    text-align: center;
+}
+
+.feature-item span {
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+/* Phone Container */
+.phone-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1200px;
+    pointer-events: none;
+    user-select: none;
+}
+
+.phone-frame {
+    width: 366px;
+    height: 720px;
+    background: linear-gradient(145deg, #4a4a4a, #2a2a2a, #4a4a4a);
+    border-radius: 50px;
+    padding: 12px;
+    box-shadow: 
+        0 0 0 4px rgba(255, 255, 255, 0.1),
+        0 0 0 2px rgba(255, 255, 255, 0.05) inset,
+        0 25px 50px rgba(0, 0, 0, 0.9),
+        0 0 0 2px rgba(255, 255, 255, 0.08) inset,
+        0 0 20px rgba(0, 0, 0, 0.6);
+    position: relative;
+    transform: rotateY(-20deg) rotateX(8deg);
+    transition: transform 0.4s ease;
+    pointer-events: none;
+    user-select: none;
+}
+
+/* iPhone Power Button */
+.phone-frame::before {
+    content: '';
+    position: absolute;
+    top: 15%;
+    right: -4px;
+    width: 8px;
+    height: 50px;
+    background: linear-gradient(to bottom, #3a3a3a, #2a2a2a, #3a3a3a);
+    border-radius: 4px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.8);
+}
+
+.phone-frame::after {
+    content: '';
+    position: absolute;
+    top: 40%;
+    right: -4px;
+    width: 8px;
+    height: 60px;
+    background: linear-gradient(to bottom, #3a3a3a, #2a2a2a, #3a3a3a);
+    border-radius: 4px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.8);
+}
+
+/* iPhone Power Button */
+.phone-frame .power-button {
+    position: absolute;
+    top: 15%;
+    right: -4px;
+    width: 8px;
+    height: 50px;
+    background: linear-gradient(to bottom, #3a3a3a, #2a2a2a, #3a3a3a);
+    border-radius: 4px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.8);
+}
+
+/* iPhone 15 Pro Max Camera Module */
+.phone-frame .camera-module {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    width: 90px;
+    height: 90px;
+    background: linear-gradient(145deg, #1a1a1a, #0a0a0a);
+    border-radius: 22px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.8);
+}
+
+.camera-module::before {
+    content: '';
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    width: 54px;
+    height: 54px;
+    background: #000;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.camera-module::after {
+    content: '';
+    position: absolute;
+    top: 27px;
+    left: 27px;
+    width: 36px;
+    height: 36px;
+    background: radial-gradient(circle, #333, #000);
+    border-radius: 11px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.phone-frame:hover {
+    transform: rotateY(-20deg) rotateX(8deg);
+}
+
+.phone-screen {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    border-radius: 39px;
+    overflow: hidden;
+    position: relative;
+    border: 4px solid #000;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 1) inset;
+    margin: 0;
+    padding: 0;
+    aspect-ratio: 19.5/9;
+}
+
+.phone-notch {
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 28px;
+    background: #000;
+    border-radius: 14px;
+    z-index: 10;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+}
+
+/* Removed speaker grille - only camera and light visible */
+
+/* Single camera lens */
+.phone-notch .camera-lens {
+    position: absolute;
+    top: 8px;
+    left: 65%;
+    width: 4.5px;
+    height: 4.5px;
+    background: linear-gradient(145deg, #1a1a1a, #000, #1a1a1a);
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 
+        0 0 4px rgba(0, 0, 0, 0.6),
+        0 0 2px rgba(255, 255, 255, 0.1) inset;
+    z-index: 15;
+}
+
+.phone-notch::after {
+    content: '';
+    position: absolute;
+    top: 9px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 2px;
+    background: #333;
+    border-radius: 1px;
+}
+
+/* Green indicator light */
+.phone-notch .indicator-light {
+    position: absolute;
+    top: 10px;
+    left: 58%;
+    width: 3px;
+    height: 3px;
+    background: #00ff00;
+    border-radius: 50%;
+    box-shadow: 
+        0 0 6px #00ff00,
+        0 0 10px #00ff00,
+        0 0 15px rgba(0, 255, 0, 0.3);
+    animation: pulse 2s ease-in-out infinite;
+    z-index: 15;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.7;
+        transform: scale(1.1);
+    }
+}
+
+.video-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: #000;
+    margin: 0;
+    top: 0;
+}
+
+/* YouTube branding overlay to hide controls */
+.video-container::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+    pointer-events: none;
+    z-index: 5;
+    border-radius: 0 0 40px 40px;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 35px;
+    object-fit: cover;
+    transform: scale(1);
+    /* Hide YouTube branding and controls */
+    filter: contrast(1.1) brightness(1.0);
+    pointer-events: none;
+    user-select: none;
+    margin: 0;
+    padding: 0;
+    display: block;
+    vertical-align: top;
+}
+
+/* Hide YouTube branding and controls */
+.video-container iframe::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    pointer-events: none;
+    z-index: 10;
+}
+
+/* YouTube iframe styles */
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 35px;
+    object-fit: cover;
+    transform: scale(1);
+    pointer-events: none;
+    user-select: none;
+    margin: 0;
+    padding: 0;
+    display: block;
+    vertical-align: top;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .demo-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+    
+    .demo-features {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    
+    .phone-frame {
+        transform: rotateY(-8deg) rotateX(3deg);
+    }
+}
+
+@media (max-width: 768px) {
+    .demo-video {
+        padding: 80px 0;
+    }
+    
+    .demo-content {
+        padding: 0 1rem;
+        gap: 2rem;
+    }
+    
+    .demo-description h3 {
+        font-size: 2rem;
+    }
+    
+    .demo-description p {
+        font-size: 1rem;
+    }
+    
+    .demo-features {
+        grid-template-columns: 1fr;
+        max-width: 300px;
+    }
+    
+    .phone-frame {
+        width: 320px;
+        height: 660px;
+        transform: rotateY(-5deg) rotateX(2deg);
+    }
+    
+    .phone-frame:hover {
+        transform: rotateY(-3deg) rotateX(1deg) scale(1.02);
+    }
+}
+
+@media (max-width: 480px) {
+    .demo-content {
+        padding: 0 0.5rem;
+    }
+    
+    .demo-description h3 {
+        font-size: 1.75rem;
+    }
+    
+    .phone-frame {
+        width: 280px;
+        height: 580px;
+        transform: none;
+    }
+    
+    .phone-frame:hover {
+        transform: scale(1.05);
+    }
+    
+    .phone-notch {
+        width: 150px;
+        height: 30px;
+    }
+}
+
+/* Expandable Gallery Styles */
+.gallery-card.hidden {
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.gallery-card.visible {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.gallery-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.gallery-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(29, 78, 216, 0.3);
+}
+
+.gallery-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(29, 78, 216, 0.4);
+}
+
+.gallery-btn i {
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .gallery-actions {
+        margin-top: 2rem;
+    }
+    
+    .gallery-btn {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* MetabolX Demo Section Styles */
+.metabolx-content {
+    flex-direction: row-reverse;
+}
+
+.metabolx-description {
+    text-align: left;
+    padding-right: 0;
+    padding-left: 3rem;
+}
+
+.metabolx-video {
+    order: -1;
+    width: 100%;
+    max-width: 800px;
+    aspect-ratio: 16/9;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.metabolx-video iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+    .metabolx-content {
+        flex-direction: column;
+    }
+    
+    .metabolx-description {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    .metabolx-video {
+        order: 0;
+        max-width: 100%;
+    }
+}
+
+/* NutriLens AR Demo Section Styles */
+.nutrilens-content {
+    flex-direction: row;
+}
+
+.nutrilens-description {
+    text-align: left;
+    padding-left: 0;
+    padding-right: 3rem;
+}
+
+.nutrilens-video {
+    order: 1;
+    width: 100%;
+    max-width: 800px;
+    aspect-ratio: 16/9;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.nutrilens-video iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+    .nutrilens-content {
+        flex-direction: column;
+    }
+    
+    .nutrilens-description {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    .nutrilens-video {
+        order: 0;
+        max-width: 100%;
+    }
+}
+
+/* Aaerolic Demo Section Styles */
+.aaerolic-content {
+    flex-direction: row-reverse;
+}
+
+.aaerolic-description {
+    text-align: left;
+    padding-right: 0;
+    padding-left: 3rem;
+}
+
+.aaerolic-video {
+    order: -1;
+    width: 100%;
+    max-width: 800px;
+    aspect-ratio: 16/9;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.aaerolic-video iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+    .aaerolic-content {
+        flex-direction: column;
+    }
+    
+    .aaerolic-description {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    .aaerolic-video {
+        order: 0;
+        max-width: 100%;
+    }
+}
+
+/* Demo Action Buttons */
+.demo-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.demo-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(29, 78, 216, 0.3);
+}
+
+.demo-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(29, 78, 216, 0.4);
+}
+
+.view-details-btn {
+    background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+}
+
+.restart-demo-btn {
+    background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+    box-shadow: 0 4px 15px rgba(29, 78, 216, 0.3);
+}
+
+.restart-demo-btn:hover {
+    box-shadow: 0 8px 25px rgba(29, 78, 216, 0.4);
+}
+
+.demo-btn i {
+    font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+    .demo-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .demo-btn {
+        width: 100%;
+        max-width: 250px;
+        justify-content: center;
     }
 }
