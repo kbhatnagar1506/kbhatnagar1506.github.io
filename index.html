@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Krishna Bhatnagar Software Engineering Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://developer.apple.com/fonts/sf-pro/sf-pro.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -60,6 +60,9 @@
                 <li><a href="#education">Education</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#certificates">Certificates</a></li>
+                <li><a href="#github">GitHub</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <button class="menu-toggle" aria-label="Toggle menu">
@@ -90,35 +93,47 @@
             </div>
         </section>
 
+        <!-- About Section -->
         <section id="about" class="about">
-            <div class="section-container">
-                <h2 class="section-title">About Me</h2>
+            <div class="container">
+                <h2 class="section-heading">About Me</h2>
                 <div class="about-content">
                     <div class="about-grid">
                         <div class="about-text">
-                            <h3 class="about-headline">💻 Aspiring Software Engineer | AI +ML Developer | Full-Stack & AR Enthusiast</h3>
-                            <p class="lead">Hi, I’m Krishna Bhatnagar, a driven software engineer-in-the-making with a unique blend of experience in AI-powered application development, healthtech innovation, and immersive technologies like AR. Currently studying Biological Sciences and Computer Science at Georgia State University, I build intelligent systems that combine real-time data, human-centric design, and scalable architecture.</p>
-                            <p>🧠 My core passion lies in solving real-world problems through code—especially in healthcare, where precision and personalization matter most.</p>
-                            <div class="key-projects">
-                                <h4>🚀 Key Projects:</h4>
-                                <ul>
-                                    <li><strong>MetabolX:</strong> An AI platform analyzing 49 key metabolites to predict diseases and recommend medications with 97.2% accuracy. Built with Flask, TensorFlow, Docker, and scikit-learn, trained on 20,000+ clinical samples.</li>
-                                    <li><strong>NutriLens AR:</strong> A Snap Spectacles-based nutrition analyzer that displays calories, macros, and vitamins in AR, using WebSockets, GPT-4, MongoDB Atlas, and Lens Studio.</li>
-                                    <li><strong>Aarolic:</strong> A GenAI-powered iOS app developed at Hacklytics that simplifies healthcare workflows—from AI pre-diagnosis and smart doctor suggestions to encrypted e-prescriptions and hospital management.</li>
-                                    <li><strong>Portfolio Website:</strong> <a href="https://kbhatnagar1506.github.io" target="_blank">kbhatnagar1506.github.io</a> – A personal showcase of my projects, experience, and journey in software development.</li>
-                                </ul>
+                            <div class="about-header">
+                                <h3>Full-Stack Developer & AI Enthusiast</h3>
+                                <p class="about-subtitle">Building AI-driven applications and consumer-ready platforms at the intersection of design, engineering, and impact</p>
                             </div>
-                            <div class="tech-stack">
-                                <h4>🧰 Skills & Technologies:</h4>
-                                <p>Python • JavaScript • Swift • Node.js • Flask • MongoDB • OpenAI APIs • Docker • HTML5/CSS3 • TensorFlow • Lens Studio • WebSockets • SwiftUI • Git/GitHub</p>
+                            <div class="about-description">
+                                <p>I'm an incoming sophomore at Georgia State University and a passionate full-stack developer building AI-driven applications and consumer-ready platforms. With over 10 hackathons, Machine Learning and Deep Learning pipeline, an iOS app internship experience, certification and programs with industry specialists and universities like Stanford and MIT, I thrive at the intersection of design, engineering, and impact.</p>
+                                <p>🎯 Most notably, I led MetabolX at HackPrinceton—applying metabolite data and ML/DL on 20K+ biomedical samples (97.2% accuracy), deploying it on Flask with GPT explanations, Docker scalability, and security-out-of-the-box. The project taught me discipline in execution, bridging technical and biological domains, and practical impact from data-driven insights.</p>
+                                <p>On GitHub (kbhatnagar1506.github.io), I showcase end‑to‑end work: from preprocessing and model training pipelines to REST APIs and client‑side dashboards. My tech stack runs Python/TensorFlow → Flask backend → React UI, and I'm also fluent in Swift, JavaScript/TypeScript, and AWS.</p>
+                                <p>My goal: — to break into big tech via powerhouse FAANG-level internships by Summer 2027. I'm currently accelerating my DSA + ML + DL + NLP + AWS skills, sharpening full-stack delivery, and building a standout catalog of production-grade ML apps.</p>
                             </div>
-                            <p>🌱 I bring a unique cross-domain perspective—from health data to app interfaces—and I'm always learning, iterating, and building. With a strong foundation in data structures, AI integration, and full-stack development, I’m actively working toward a career as a Software Engineer ready to lead impactful, scalable projects.</p>
-                            <p class="closing">Let’s build the future—one line of code at a time.</p>
-                            <p class="cta">📩 Open to collaborations, internships, and software development opportunities.</p>
-                        </div>
-                        <div class="about-image">
-                            <div class="image-wrapper">
-                                <img src="assets/profile.png" alt="Krishna Bhatnagar" class="profile-image">
+                            <div class="about-highlights">
+                                <div class="highlight-item">
+                                    <i class="fa-solid fa-graduation-cap"></i>
+                                    <span>Incoming Sophomore at GSU</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fa-solid fa-trophy"></i>
+                                    <span>10+ Hackathons</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fa-solid fa-brain"></i>
+                                    <span>6 Major ML/AI Projects</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fa-solid fa-mobile-screen"></i>
+                                    <span>iOS App Internship</span>
+                                </div>
+                            </div>
+                            <div class="about-cta">
+                                <a href="#contact" class="btn btn-primary">Let's Connect</a>
+                                <a href="assets/Krishna_Bhatnagar_SWEResume.pdf" target="_blank" class="btn btn-secondary">
+                                    <i class="fa-solid fa-download"></i>
+                                    Download Resume
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -126,113 +141,28 @@
             </div>
         </section>
 
-        <!-- Skills Section -->
-        <section id="skills" class="skills">
-            <h2 class="section-heading">Skills & Expertise</h2>
-            <div class="skills-content">
-                <div class="skills-grid">
-                    <!-- Programming & Web -->
-                    <div class="skill-card">
-                        <span class="skill-icon"><i class="fa-solid fa-code"></i></span>
-                        <h3>Programming & Web</h3>
-                        <div class="skills-list">
-                            <div class="skill-item"><span class="skill-name">Python</span><div class="skill-bar"><div class="skill-progress" style="--progress: 95%"></div></div></div>
-                            <div class="skill-item"><span class="skill-name">JavaScript/TypeScript</span><div class="skill-bar"><div class="skill-progress" style="--progress: 90%"></div></div></div>
-                            <div class="skill-item"><span class="skill-name">Swift/SwiftUI</span><div class="skill-bar"><div class="skill-progress" style="--progress: 88%"></div></div></div>
-                            <div class="skill-item"><span class="skill-name">C++</span><div class="skill-bar"><div class="skill-progress" style="--progress: 80%"></div></div></div>
-                            <div class="skill-item"><span class="skill-name">Java</span><div class="skill-bar"><div class="skill-progress" style="--progress: 80%"></div></div></div>
-                            <div class="skill-item"><span class="skill-name">SQL</span><div class="skill-bar"><div class="skill-progress" style="--progress: 85%"></div></div></div>
-                            <div class="skill-item"><span class="skill-name">Bash</span><div class="skill-bar"><div class="skill-progress" style="--progress: 75%"></div></div></div>
-                            <div class="skill-item"><span class="skill-name">HTML5/CSS3</span><div class="skill-bar"><div class="skill-progress" style="--progress: 92%"></div></div></div>
-                            <div class="skill-item"><span class="skill-name">React</span><div class="skill-bar"><div class="skill-progress" style="--progress: 90%"></div></div></div>
-                            <div class="skill-item"><span class="skill-name">Next.js</span><div class="skill-bar"><div class="skill-progress" style="--progress: 85%"></div></div></div>
-                            <div class="skill-item"><span class="skill-name">Node.js/Express</span><div class="skill-bar"><div class="skill-progress" style="--progress: 88%"></div></div></div>
-                            <div class="skill-item"><span class="skill-name">Flask</span><div class="skill-bar"><div class="skill-progress" style="--progress: 85%"></div></div></div>
-                            <div class="skill-item"><span class="skill-name">FastAPI</span><div class="skill-bar"><div class="skill-progress" style="--progress: 80%"></div></div></div>
-                            <div class="skill-item"><span class="skill-name">REST & GraphQL APIs</span><div class="skill-bar"><div class="skill-progress" style="--progress: 85%"></div></div></div>
-                            <div class="skill-item"><span class="skill-name">WebSockets</span><div class="skill-bar"><div class="skill-progress" style="--progress: 80%"></div></div></div>
-                            <div class="skill-item"><span class="skill-name">Tailwind CSS</span><div class="skill-bar"><div class="skill-progress" style="--progress: 80%"></div></div></div>
-                            <div class="skill-item"><span class="skill-name">Responsive & PWA Design</span><div class="skill-bar"><div class="skill-progress" style="--progress: 85%"></div></div></div>
-                        </div>
+        <!-- Resume Section -->
+        <section id="resume" class="resume">
+            <div class="container">
+                <h2 class="section-heading">Resume</h2>
+                <div class="resume-content">
+                    <div class="resume-actions">
+                        <a href="assets/Krishna_Bhatnagar_SWEResume.pdf" target="_blank" class="btn btn-primary">
+                            <i class="fa-solid fa-eye"></i>
+                            View Resume
+                        </a>
+                        <a href="assets/Krishna_Bhatnagar_SWEResume.pdf" download class="btn btn-secondary">
+                            <i class="fa-solid fa-download"></i>
+                            Download PDF
+                        </a>
                     </div>
-                    <!-- AI/ML, MLOps & Tools -->
-                    <div class="skill-card">
-                        <span class="skill-icon"><i class="fa-solid fa-brain"></i></span>
-                        <h3>AI/ML, MLOps & Tools</h3>
-                        <div class="skills-list">
-                            <div class="skill-item"><span class="skill-name">TensorFlow</span><div class="skill-bar"><div class="skill-progress" style="--progress: 90%"></div></div></div>
-                            <div class="skill-item"><span class="skill-name">PyTorch</span><div class="skill-bar"><div class="skill-progress" style="--progress: 85%"></div></div></div>
-                            <div class="skill-item"><span class="skill-name">scikit-learn</span><div class="skill-bar"><div class="skill-progress" style="--progress: 88%"></div></div></div>
-                            <div class="skill-item"><span class="skill-name">Keras</span><div class="skill-bar"><div class="skill-progress" style="--progress: 85%"></div></div></div>
-                            <div class="skill-item"><span class="skill-name">NumPy</span><div class="skill-bar"><div class="skill-progress" style="--progress: 90%"></div></div></div>
-                            <div class="skill-item"><span class="skill-name">Pandas</span><div class="skill-bar"><div class="skill-progress" style="--progress: 90%"></div></div></div>
-                            <div class="skill-item"><span class="skill-name">SciPy</span><div class="skill-bar"><div class="skill-progress" style="--progress: 85%"></div></div></div>
-                            <div class="skill-item"><span class="skill-name">Hugging Face</span><div class="skill-bar"><div class="skill-progress" style="--progress: 80%"></div></div></div>
-                            <div class="skill-item"><span class="skill-name">CNNs (ResNet, EfficientNet)</span><div class="skill-bar"><div class="skill-progress" style="--progress: 85%"></div></div></div>
-                            <div class="skill-item"><span class="skill-name">RNNs (LSTM, GRU)</span><div class="skill-bar"><div class="skill-progress" style="--progress: 80%"></div></div></div>
-                            <div class="skill-item"><span class="skill-name">Transformers</span><div class="skill-bar"><div class="skill-progress" style="--progress: 80%"></div></div></div>
-                            <div class="skill-item"><span class="skill-name">XGBoost</span><div class="skill-bar"><div class="skill-progress" style="--progress: 80%"></div></div></div>
-                            <div class="skill-item"><span class="skill-name">MLflow</span><div class="skill-bar"><div class="skill-progress" style="--progress: 75%"></div></div></div>
-                            <div class="skill-item"><span class="skill-name">Docker</span><div class="skill-bar"><div class="skill-progress" style="--progress: 85%"></div></div></div>
-                            <div class="skill-item"><span class="skill-name">Kubernetes</span><div class="skill-bar"><div class="skill-progress" style="--progress: 75%"></div></div></div>
-                            <div class="skill-item"><span class="skill-name">CI/CD</span><div class="skill-bar"><div class="skill-progress" style="--progress: 80%"></div></div></div>
-                            <div class="skill-item"><span class="skill-name">TensorFlow Serving</span><div class="skill-bar"><div class="skill-progress" style="--progress: 75%"></div></div></div>
-                            <div class="skill-item"><span class="skill-name">TorchServe</span><div class="skill-bar"><div class="skill-progress" style="--progress: 70%"></div></div></div>
-                            <div class="skill-item"><span class="skill-name">A/B Testing</span><div class="skill-bar"><div class="skill-progress" style="--progress: 75%"></div></div></div>
-                            <div class="skill-item"><span class="skill-name">Hyperparameter Tuning</span><div class="skill-bar"><div class="skill-progress" style="--progress: 80%"></div></div></div>
-                            <div class="skill-item"><span class="skill-name">Feature Engineering</span><div class="skill-bar"><div class="skill-progress" style="--progress: 80%"></div></div></div>
-                            <div class="skill-item"><span class="skill-name">Git/GitHub</span><div class="skill-bar"><div class="skill-progress" style="--progress: 90%"></div></div></div>
-                            <div class="skill-item"><span class="skill-name">Unit Testing</span><div class="skill-bar"><div class="skill-progress" style="--progress: 80%"></div></div></div>
-                        </div>
-                    </div>
-                    <!-- Cloud, AR, & Databases -->
-                    <div class="skill-card">
-                        <span class="skill-icon"><i class="fa-solid fa-cloud"></i></span>
-                        <h3>Cloud, AR, & Databases</h3>
-                        <div class="skills-list">
-                            <div class="skill-item"><span class="skill-name">AWS (EC2, S3, Lambda, RDS, IAM)</span><div class="skill-bar"><div class="skill-progress" style="--progress: 80%"></div></div></div>
-                            <div class="skill-item"><span class="skill-name">GCP (Cloud Run, Firestore, BigQuery)</span><div class="skill-bar"><div class="skill-progress" style="--progress: 75%"></div></div></div>
-                            <div class="skill-item"><span class="skill-name">Heroku</span><div class="skill-bar"><div class="skill-progress" style="--progress: 70%"></div></div></div>
-                            <div class="skill-item"><span class="skill-name">PostgreSQL</span><div class="skill-bar"><div class="skill-progress" style="--progress: 80%"></div></div></div>
-                            <div class="skill-item"><span class="skill-name">MySQL</span><div class="skill-bar"><div class="skill-progress" style="--progress: 75%"></div></div></div>
-                            <div class="skill-item"><span class="skill-name">MongoDB Atlas</span><div class="skill-bar"><div class="skill-progress" style="--progress: 80%"></div></div></div>
-                            <div class="skill-item"><span class="skill-name">Firebase (Realtime DB/Firestore)</span><div class="skill-bar"><div class="skill-progress" style="--progress: 75%"></div></div></div>
-                            <div class="skill-item"><span class="skill-name">Redis</span><div class="skill-bar"><div class="skill-progress" style="--progress: 70%"></div></div></div>
-                            <div class="skill-item"><span class="skill-name">Data Structures</span><div class="skill-bar"><div class="skill-progress" style="--progress: 85%"></div></div></div>
-                            <div class="skill-item"><span class="skill-name">Snap Lens Studio</span><div class="skill-bar"><div class="skill-progress" style="--progress: 80%"></div></div></div>
-                            <div class="skill-item"><span class="skill-name">ARKit/ARCore</span><div class="skill-bar"><div class="skill-progress" style="--progress: 75%"></div></div></div>
-                            <div class="skill-item"><span class="skill-name">iOS (Xcode, SwiftUI)</span><div class="skill-bar"><div class="skill-progress" style="--progress: 85%"></div></div></div>
-                        </div>
+                    
+                    <div class="resume-embed">
+                        <iframe src="assets/Krishna_Bhatnagar_SWEResume.pdf" width="100%" height="600" frameborder="0"></iframe>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- End Skills Section -->
-        <script>
-        // Animate skill progress bars when skills section is in view
-        document.addEventListener('DOMContentLoaded', function() {
-          const skillsSection = document.querySelector('#skills');
-          const skillCards = document.querySelectorAll('.skill-card');
-          const skillProgresses = document.querySelectorAll('.skill-progress');
-          let animated = false;
-
-          function animateBars() {
-            if (animated) return;
-            const sectionTop = skillsSection.getBoundingClientRect().top;
-            const windowHeight = window.innerHeight;
-            if (sectionTop < windowHeight - 100) {
-              skillProgresses.forEach(bar => {
-                const progress = bar.style.getPropertyValue('--progress') || '0%';
-                bar.style.width = progress;
-              });
-              animated = true;
-            }
-          }
-
-          window.addEventListener('scroll', animateBars);
-          animateBars(); // in case already in view
-        });
-        </script>
 
         <!-- Experience Section -->
         <section id="experience" class="experience">
@@ -278,12 +208,379 @@
                 </div>
             </div>
         </section>
+<!-- Product Gallery Section -->
+<section id="gallery" class="gallery">
+    <h2 class="section-heading">Product Showcase</h2>
+    <div class="gallery-content">
+        <div class="gallery-grid">
+            <!-- NutriLens AR -->
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="assets/nutrilens-ar.png" alt="NutriLens AR">
+                </div>
+                <div class="gallery-content">
+                    <h3>NutriLens AR</h3>
+                    <p class="gallery-description">AI-powered AR nutrition analyzer for Snap Spectacles with real-time calorie tracking and dietary insights.</p>
+                    <div class="gallery-tech">
+                        <span class="tech-tag">AR</span>
+                        <span class="tech-tag">AI</span>
+                        <span class="tech-tag">Snap Spectacles</span>
+                        <span class="tech-tag">WebSockets</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MetabolX -->
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="assets/metabolx.png" alt="MetabolX">
+                </div>
+                <div class="gallery-content">
+                    <h3>MetabolX</h3>
+                    <p class="gallery-description">AI-powered health analysis platform with 97.2% accuracy in disease prediction and personalized medicine recommendations.</p>
+                    <div class="gallery-tech">
+                        <span class="tech-tag">AI/ML</span>
+                        <span class="tech-tag">TensorFlow</span>
+                        <span class="tech-tag">Flask</span>
+                        <span class="tech-tag">Docker</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Aarolic -->
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="assets/aarolic-logo.png" alt="Aarolic">
+                </div>
+                <div class="gallery-content">
+                    <h3>Aarolic</h3>
+                    <p class="gallery-description">GenAI-powered iOS healthcare app with AI pre-diagnosis, smart doctor suggestions, and encrypted e-prescriptions.</p>
+                    <div class="gallery-tech">
+                        <span class="tech-tag">iOS</span>
+                        <span class="tech-tag">SwiftUI</span>
+                        <span class="tech-tag">GenAI</span>
+                        <span class="tech-tag">Healthcare</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VFC Login Screen -->
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="assets/Screenshot 2025-06-14 at 14.04.35.PNG" alt="VFC Login Screen">
+                </div>
+                <div class="gallery-content">
+                    <h3>VFC Login Screen</h3>
+                    <p class="gallery-description">Secure authentication interface with phone verification and OTP validation for financial services.</p>
+                    <div class="gallery-tech">
+                        <span class="tech-tag">Authentication</span>
+                        <span class="tech-tag">OTP</span>
+                        <span class="tech-tag">Security</span>
+                        <span class="tech-tag">Mobile</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VFC Loan Application -->
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="assets/Screenshot 2025-06-14 at 14.07.24.PNG" alt="VFC Loan Application">
+                </div>
+                <div class="gallery-content">
+                    <h3>VFC Loan Application</h3>
+                    <p class="gallery-description">Multi-step loan application process with bank selection, EMI calculator, and document upload workflow.</p>
+                    <div class="gallery-tech">
+                        <span class="tech-tag">Loan App</span>
+                        <span class="tech-tag">EMI Calculator</span>
+                        <span class="tech-tag">Bank Integration</span>
+                        <span class="tech-tag">Workflow</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VFC Employment Selection -->
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="assets/Screenshot 2025-06-14 at 14.07.33.PNG" alt="VFC Employment Selection">
+                </div>
+                <div class="gallery-content">
+                    <h3>VFC Employment Selection</h3>
+                    <p class="gallery-description">Employment type selection interface with different document requirements for salaried, self-employed, and professional categories.</p>
+                    <div class="gallery-tech">
+                        <span class="tech-tag">User Flow</span>
+                        <span class="tech-tag">Documentation</span>
+                        <span class="tech-tag">UX Design</span>
+                        <span class="tech-tag">Mobile</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VFC AI Assistant -->
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="assets/Screenshot 2025-06-14 at 14.07.40.PNG" alt="VFC AI Assistant">
+                </div>
+                <div class="gallery-content">
+                    <h3>VFC AI Assistant</h3>
+                    <p class="gallery-description">Intelligent chatbot for financial queries with quick questions and real-time assistance for loan-related inquiries.</p>
+                    <div class="gallery-tech">
+                        <span class="tech-tag">AI Chatbot</span>
+                        <span class="tech-tag">NLP</span>
+                        <span class="tech-tag">Financial</span>
+                        <span class="tech-tag">Real-time</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VFC EMI Calculator -->
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="assets/Screenshot 2025-06-14 at 14.08.07.PNG" alt="VFC EMI Calculator">
+                </div>
+                <div class="gallery-content">
+                    <h3>VFC EMI Calculator</h3>
+                    <p class="gallery-description">Advanced EMI calculator with reducing rate method, loan amount sliders, and detailed breakdown of principal and interest.</p>
+                    <div class="gallery-tech">
+                        <span class="tech-tag">Calculator</span>
+                        <span class="tech-tag">Financial</span>
+                        <span class="tech-tag">Sliders</span>
+                        <span class="tech-tag">Real-time</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VFC Loan Products -->
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="assets/Screenshot 2025-06-14 at 14.08.18.PNG" alt="VFC Loan Products">
+                </div>
+                <div class="gallery-content">
+                    <h3>VFC Loan Products</h3>
+                    <p class="gallery-description">Comprehensive loan product selection with home loans, property loans, and detailed feature comparisons.</p>
+                    <div class="gallery-tech">
+                        <span class="tech-tag">Product Catalog</span>
+                        <span class="tech-tag">Comparison</span>
+                        <span class="tech-tag">Financial</span>
+                        <span class="tech-tag">Mobile</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VFC Application Portal -->
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="assets/Screenshot 2025-06-14 at 14.08.27.PNG" alt="VFC Application Portal">
+                </div>
+                <div class="gallery-content">
+                    <h3>VFC Application Portal</h3>
+                    <p class="gallery-description">Application management portal with status tracking, progress monitoring, and document upload functionality.</p>
+                    <div class="gallery-tech">
+                        <span class="tech-tag">Portal</span>
+                        <span class="tech-tag">Tracking</span>
+                        <span class="tech-tag">Management</span>
+                        <span class="tech-tag">Dashboard</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VFC Document Upload -->
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="assets/Screenshot 2025-06-14 at 14.08.52.PNG" alt="VFC Document Upload">
+                </div>
+                <div class="gallery-content">
+                    <h3>VFC Document Upload</h3>
+                    <p class="gallery-description">Secure document upload interface with categorized requirements for identity, income, and address verification.</p>
+                    <div class="gallery-tech">
+                        <span class="tech-tag">File Upload</span>
+                        <span class="tech-tag">Security</span>
+                        <span class="tech-tag">Verification</span>
+                        <span class="tech-tag">Mobile</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VFC Bank Selection -->
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="assets/Screenshot 2025-06-14 at 14.09.18.PNG" alt="VFC Bank Selection">
+                </div>
+                <div class="gallery-content">
+                    <h3>VFC Bank Selection</h3>
+                    <p class="gallery-description">Partner bank selection interface with interest rates, logos, and comprehensive banking options for loan applications.</p>
+                    <div class="gallery-tech">
+                        <span class="tech-tag">Bank Integration</span>
+                        <span class="tech-tag">Rates</span>
+                        <span class="tech-tag">Partnership</span>
+                        <span class="tech-tag">Selection</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VFC Loan Information -->
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="assets/Screenshot 2025-06-14 at 14.10.33.PNG" alt="VFC Loan Information">
+                </div>
+                <div class="gallery-content">
+                    <h3>VFC Loan Information</h3>
+                    <p class="gallery-description">Detailed loan product information with EMI calculations, tenure options, and feature comparisons for informed decisions.</p>
+                    <div class="gallery-tech">
+                        <span class="tech-tag">Product Info</span>
+                        <span class="tech-tag">EMI</span>
+                        <span class="tech-tag">Comparison</span>
+                        <span class="tech-tag">Details</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VFC Application Details -->
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="assets/Screenshot 2025-06-14 at 14.10.48.PNG" alt="VFC Application Details">
+                </div>
+                <div class="gallery-content">
+                    <h3>VFC Application Details</h3>
+                    <p class="gallery-description">Comprehensive application overview with progress tracking, status updates, and next action requirements.</p>
+                    <div class="gallery-tech">
+                        <span class="tech-tag">Application</span>
+                        <span class="tech-tag">Progress</span>
+                        <span class="tech-tag">Status</span>
+                        <span class="tech-tag">Tracking</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VFC Testimonials -->
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="assets/Screenshot 2025-06-14 at 14.11.03.PNG" alt="VFC Testimonials">
+                </div>
+                <div class="gallery-content">
+                    <h3>VFC Testimonials</h3>
+                    <p class="gallery-description">Customer testimonials and reviews section with verified feedback, ratings, and trust indicators for financial services.</p>
+                    <div class="gallery-tech">
+                        <span class="tech-tag">Testimonials</span>
+                        <span class="tech-tag">Reviews</span>
+                        <span class="tech-tag">Trust</span>
+                        <span class="tech-tag">Social Proof</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VFC Why Choose -->
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="assets/Screenshot 2025-06-14 at 14.11.11.PNG" alt="VFC Why Choose">
+                </div>
+                <div class="gallery-content">
+                    <h3>VFC Why Choose</h3>
+                    <p class="gallery-description">Value proposition showcase highlighting door-to-door service, 25 years of trust, and zero processing fees.</p>
+                    <div class="gallery-tech">
+                        <span class="tech-tag">Value Prop</span>
+                        <span class="tech-tag">Trust</span>
+                        <span class="tech-tag">Benefits</span>
+                        <span class="tech-tag">Marketing</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VFC Offices -->
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="assets/Screenshot 2025-06-14 at 14.11.15.PNG" alt="VFC Offices">
+                </div>
+                <div class="gallery-content">
+                    <h3>VFC Offices</h3>
+                    <p class="gallery-description">Interactive office locations with map integration, contact details, and directions for multiple branches across India.</p>
+                    <div class="gallery-tech">
+                        <span class="tech-tag">Maps</span>
+                        <span class="tech-tag">Locations</span>
+                        <span class="tech-tag">Contact</span>
+                        <span class="tech-tag">Directions</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VFC Bug Report -->
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="assets/Screenshot 2025-06-14 at 14.12.13.PNG" alt="VFC Bug Report">
+                </div>
+                <div class="gallery-content">
+                    <h3>VFC Bug Report</h3>
+                    <p class="gallery-description">Comprehensive bug reporting system with categorization, severity levels, and detailed reproduction steps for quality assurance.</p>
+                    <div class="gallery-tech">
+                        <span class="tech-tag">Bug Report</span>
+                        <span class="tech-tag">QA</span>
+                        <span class="tech-tag">Feedback</span>
+                        <span class="tech-tag">Support</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VFC Bank Selection 2 -->
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="assets/Screenshot 2025-06-14 at 14.12.51.PNG" alt="VFC Bank Selection 2">
+                </div>
+                <div class="gallery-content">
+                    <h3>VFC Bank Selection 2</h3>
+                    <p class="gallery-description">Alternative bank selection interface with different layout and enhanced user experience for loan applications.</p>
+                    <div class="gallery-tech">
+                        <span class="tech-tag">Bank Selection</span>
+                        <span class="tech-tag">UX Design</span>
+                        <span class="tech-tag">Financial</span>
+                        <span class="tech-tag">Mobile</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VFC Testimonials 2 -->
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="assets/Screenshot 2025-06-14 at 14.12.58.PNG" alt="VFC Testimonials 2">
+                </div>
+                <div class="gallery-content">
+                    <h3>VFC Testimonials 2</h3>
+                    <p class="gallery-description">Additional customer testimonials with different layout and enhanced social proof elements for financial services.</p>
+                    <div class="gallery-tech">
+                        <span class="tech-tag">Testimonials</span>
+                        <span class="tech-tag">Social Proof</span>
+                        <span class="tech-tag">Trust</span>
+                        <span class="tech-tag">Reviews</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VFC Application Portal 2 -->
+            <div class="gallery-card">
+                <div class="gallery-image">
+                    <img src="assets/Screenshot 2025-06-14 at 14.13.08.PNG" alt="VFC Application Portal 2">
+                </div>
+                <div class="gallery-content">
+                    <h3>VFC Application Portal 2</h3>
+                    <p class="gallery-description">Enhanced application management portal with improved status tracking and progress monitoring features.</p>
+                    <div class="gallery-tech">
+                        <span class="tech-tag">Portal</span>
+                        <span class="tech-tag">Management</span>
+                        <span class="tech-tag">Dashboard</span>
+                        <span class="tech-tag">Tracking</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
 
         <!-- Education Section -->
         <section class="education" id="education">
             <div class="education-content">
                 <h2>Education</h2>
                 <div class="education-grid">
+                    <!-- Georgia State University -->
                     <div class="education-card">
                         <div class="education-header">
                             <span class="education-year">2023 - 2027</span>
@@ -298,6 +595,26 @@
                                 <li>Concentration: Artificial Intelligence And Machine Learning</li>
                                 <li>Expected Graduation: May 2027</li>
                                 <li>Related Coursework: Data Structures & Algorithms, Objects & Design, Computer Organization & Programming, Combinatorics, Machine Learning, Artificial Intelligence, Object-Oriented Programming, Statistics & Applications</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Ryan International School -->
+                    <div class="education-card">
+                        <div class="education-header">
+                            <span class="education-year">2019 - 2023</span>
+                            <div class="education-logo">
+                                <img src="assets/ryanlogo.png" alt="Ryan International School Logo">
+                            </div>
+                            <h3>High School Diploma</h3>
+                            <div class="education-school">Ryan International School, India</div>
+                        </div>
+                        <div class="education-details">
+                            <ul>
+                                <li>Science Stream with Computer Science</li>
+                                <li>Graduated: May 2023</li>
+                                <li>Key Achievements: Academic Excellence, Leadership in Tech Clubs, Science Olympiad Participation</li>
+                                <li>Activities: Coding Competitions, Science Projects, Student Council</li>
                             </ul>
                         </div>
                     </div>
@@ -504,6 +821,168 @@
             </div>
         </section>
 
+        <!-- GitHub Section -->
+        <section id="github" class="github">
+            <div class="github-content">
+                <div class="github-header-section">
+                    <div class="github-logo-large">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <h2 class="github-section-title">Krishna Bhatnagar's GitHub</h2>
+                </div>
+                <div class="github-layout" onclick="window.open('https://github.com/kbhatnagar1506', '_blank')">
+                    <!-- Left Sidebar - Profile Info -->
+                    <div class="github-sidebar">
+                        <div class="github-avatar-large">
+                            <img src="https://github.com/kbhatnagar1506.png" alt="Krishna Bhatnagar" onerror="this.src='https://via.placeholder.com/150/333333/ffffff?text=KB'">
+                        </div>
+                        <div class="github-profile-details">
+                            <h3 class="github-name">KRISHNA BHATNAGAR</h3>
+                            <p class="github-handle">kbhatnagar1506 · he/him</p>
+                            <p class="github-bio">Hi, he's Krishna — a Computer Science undergrad @ GSU, passionate about building intelligent systems 🚀 Currently diving deep into ML, DL and NLP.</p>
+                            <div class="github-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>@georgia state university</span>
+                            </div>
+                            <div class="github-contact">
+                                <div class="contact-item">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>krishna@vfcloans.com</span>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-link"></i>
+                                    <a href="https://kbhatnagar1506.github.io" target="_blank">kbhatnagar1506.github.io</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Main Content Area -->
+                    <div class="github-main">
+                        <!-- Pinned Repositories -->
+                        <div class="github-pinned">
+                            <div class="pinned-header">
+                                <h4>Pinned</h4>
+                                <a href="#" class="customize-link">Customize your pins</a>
+                            </div>
+                            <div class="pinned-grid">
+                                <a href="https://github.com/kbhatnagar1506/metabolx-webapp" target="_blank" class="pinned-repo" onclick="event.stopPropagation();">
+                                    <div class="repo-icon">
+                                        <i class="fas fa-book"></i>
+                                    </div>
+                                                                    <div class="repo-details">
+                                    <h5>metabolx-webapp</h5>
+                                    <p class="repo-description">AI-powered biomedical data analysis platform</p>
+                                    <div class="repo-meta">
+                                        <span class="repo-visibility">Public</span>
+                                        <span class="repo-language">HTML</span>
+                                    </div>
+                                </div>
+                                </a>
+                                <a href="https://github.com/kbhatnagar1506/DSA" target="_blank" class="pinned-repo" onclick="event.stopPropagation();">
+                                    <div class="repo-icon">
+                                        <i class="fas fa-book"></i>
+                                    </div>
+                                                                    <div class="repo-details">
+                                    <h5>DSA</h5>
+                                    <p class="repo-description">Data Structures and Algorithms implementations</p>
+                                    <div class="repo-meta">
+                                        <span class="repo-visibility">Public</span>
+                                        <span class="repo-language">Python</span>
+                                    </div>
+                                </div>
+                                </a>
+                                <a href="https://github.com/kbhatnagar1506/MLmodels" target="_blank" class="pinned-repo" onclick="event.stopPropagation();">
+                                    <div class="repo-icon">
+                                        <i class="fas fa-book"></i>
+                                    </div>
+                                                                    <div class="repo-details">
+                                    <h5>MLmodels</h5>
+                                    <p class="repo-description">Machine Learning model collection and experiments</p>
+                                    <div class="repo-meta">
+                                        <span class="repo-visibility">Public</span>
+                                        <span class="repo-language">Python</span>
+                                    </div>
+                                </div>
+                                </a>
+                                <a href="https://github.com/kbhatnagar1506/NutriLens" target="_blank" class="pinned-repo" onclick="event.stopPropagation();">
+                                    <div class="repo-icon">
+                                        <i class="fas fa-book"></i>
+                                    </div>
+                                                                    <div class="repo-details">
+                                    <h5>NutriLens</h5>
+                                    <p class="repo-description">Nutrition analysis using computer vision</p>
+                                    <div class="repo-meta">
+                                        <span class="repo-visibility">Public</span>
+                                        <span class="repo-language">Python</span>
+                                    </div>
+                                </div>
+                                </a>
+                                <a href="https://github.com/kbhatnagar1506/kbhatnagar1506.github.io" target="_blank" class="pinned-repo" onclick="event.stopPropagation();">
+                                    <div class="repo-icon">
+                                        <i class="fas fa-book"></i>
+                                    </div>
+                                                                    <div class="repo-details">
+                                    <h5>kbhatnagar1506.github.io</h5>
+                                    <p class="repo-description">my portfolio website</p>
+                                    <div class="repo-meta">
+                                        <span class="repo-visibility">Public</span>
+                                        <span class="repo-language">CSS</span>
+                                    </div>
+                                </div>
+                                </a>
+                                <a href="https://github.com/kbhatnagar1506/aarolic" target="_blank" class="pinned-repo" onclick="event.stopPropagation();">
+                                    <div class="repo-icon">
+                                        <i class="fas fa-book"></i>
+                                    </div>
+                                                                    <div class="repo-details">
+                                    <h5>aarolic</h5>
+                                    <p class="repo-description">iOS app development project</p>
+                                    <div class="repo-meta">
+                                        <span class="repo-visibility">Public</span>
+                                        <span class="repo-language">Swift</span>
+                                    </div>
+                                </div>
+                                </a>
+                                <a href="https://github.com/kbhatnagar1506/portfolio" target="_blank" class="pinned-repo" onclick="event.stopPropagation();">
+                                    <div class="repo-icon">
+                                        <i class="fas fa-book"></i>
+                                    </div>
+                                                                    <div class="repo-details">
+                                    <h5>portfolio</h5>
+                                    <p class="repo-description">Personal portfolio website</p>
+                                    <div class="repo-meta">
+                                        <span class="repo-visibility">Public</span>
+                                        <span class="repo-language">HTML</span>
+                                    </div>
+                                </div>
+                                </a>
+                                <a href="https://github.com/kbhatnagar1506/VFCLoans" target="_blank" class="pinned-repo" onclick="event.stopPropagation();">
+                                    <div class="repo-icon">
+                                        <i class="fas fa-book"></i>
+                                    </div>
+                                                                    <div class="repo-details">
+                                    <h5>VFCLoans</h5>
+                                    <p class="repo-description">iOS loan management application</p>
+                                    <div class="repo-meta">
+                                        <span class="repo-visibility">Public</span>
+                                        <span class="repo-language">Swift</span>
+                                    </div>
+                                </div>
+                                </a>
+                            </div>
+                        </div>
+                        
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resume Section -->
+                
+
+        
         <section id="contact" class="contact">
             <h2>Let's Connect</h2>
             <div class="contact-content">
@@ -564,9 +1043,9 @@
         </div>
     </footer>
     <script>
-        const mainTitle = "Hi! I’m Krishna Bhatnagar";
-        const roleText = "Aspiring Software Engineer | AI +ML Developer | Full-Stack & AR Enthusiast";
-        const descriptionText = `Hi, I’m Krishna Bhatnagar, a driven software engineer-in-the-making with a unique blend of experience in AI-powered application development, healthtech innovation, and immersive technologies like AR. Currently studying Biological Sciences and Computer Science at Georgia State University, I build intelligent systems that combine real-time data, human-centric design, and scalable architecture.`;
+        const mainTitle = "Hi! I'm Krishna Bhatnagar";
+        const roleText = "Full-Stack Developer | AI/ML Specialist | iOS Developer";
+        const descriptionText = `I'm an incoming sophomore at Georgia State University and a passionate full-stack developer building AI-driven applications and consumer-ready platforms. With over 10 hackathons, Machine Learning and Deep Learning pipeline, an iOS app internship experience, certification and programs with industry specialists and universities like Stanford and MIT, I thrive at the intersection of design, engineering, and impact.`;
 
         function sleep(ms) {
             return new Promise(resolve => setTimeout(resolve, ms));
